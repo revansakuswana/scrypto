@@ -45,8 +45,10 @@ export default function SectionTwo() {
       justify-center
       text-center
       text-white
-      py-30
-      px-35
+      pt-20
+      px-5
+      sm:px-35
+      sm:py-30
     ">
       {/* Pill/Tag di atas judul */}
       <div

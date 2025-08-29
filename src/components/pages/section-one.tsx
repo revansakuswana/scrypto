@@ -15,9 +15,11 @@ export default function SectionOne() {
       justify-center
       text-center
       text-white
-      pt-50
-      pb-30
-      px-35
+      pt-30
+      px-5
+      sm:pt-50
+      sm:px-35
+      sm:pb-30
     ">
       {/* Pill/Tag di atas judul */}
       <div
