@@ -104,18 +104,23 @@ export default function SectionOne() {
         </button>
 
         {/* Tombol "Join Telegram" */}
-        <button
-          className="
-          flex items-center gap-2 
-          px-6 py-5 
-          rounded-lg 
-          font-bold 
-          bg-gradient-to-r from-blue-500 to-cyan-500 
-          hover:opacity-90 transition-opacity
-        ">
-          <IconMessageCircle size={20} />
-          <span>JOIN TELEGRAM</span>
-        </button>
+        <a
+          href="https://t.me/scryptoxrd"
+          target="_blank"
+          rel="noopener noreferrer">
+          <button
+            className="
+            flex items-center gap-2 
+            px-6 py-5 
+            rounded-lg 
+            font-bold 
+            bg-gradient-to-r from-blue-500 to-cyan-500 
+            hover:opacity-90 transition-opacity
+          ">
+            <IconMessageCircle size={20} />
+            <span>JOIN TELEGRAM</span>
+          </button>
+        </a>
 
         {/* Tombol "View Chart" */}
         <button

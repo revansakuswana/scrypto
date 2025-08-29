@@ -1,9 +1,4 @@
-import {
-  IconEye,
-  IconUsersGroup,
-  IconUsers,
-  IconBolt,
-} from "@tabler/icons-react";
+import { IconEye, IconUsers, IconBolt } from "@tabler/icons-react";
 
 import WolfImage from "../../../public/logo-header.png";
 
@@ -85,7 +80,7 @@ export default function SectionSix() {
               flex gap-6 items-start
             ">
             <div className="bg-cyan-500/20 p-3 rounded-full">
-              <IconUsersGroup size={28} className="text-cyan-400" />
+              <IconUsers size={28} className="text-cyan-400" />
             </div>
             <div>
               <h3 className="text-2xl font-bold mb-2">Mission</h3>

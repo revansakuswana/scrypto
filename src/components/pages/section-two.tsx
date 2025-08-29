@@ -12,7 +12,7 @@ export default function SectionTwo() {
     {
       icon: <IconBolt size={42} className="text-purple-400" />,
       title: "Lightning Fast",
-      description: "Built on Radix DLT",
+      description: "Built on Radix",
       color: "text-purple-400",
     },
     {
@@ -86,10 +86,6 @@ export default function SectionTwo() {
             Inspired by the futuristic and loyal vibe of a cyber- enhanced
             husky, Scrypto is a wild, community-driven meme coin that embodies
             strength, adaptability, and innovation within the Radix ecosystem.
-          </p>
-          <p className="text-lg  text-gray-400  leading-relaxed">
-            We're the digital wolves of crypto. No rug pulls, just neon vibes
-            and moon missions.
           </p>
 
           {/* Grid untuk Feature Cards */}
