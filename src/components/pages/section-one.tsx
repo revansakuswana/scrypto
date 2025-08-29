@@ -37,7 +37,7 @@ export default function SectionOne() {
         mb-6
       ">
         <img src="/logo-heading.png" alt="Logo" className="w-4 h-4 mx-auto" />
-        $SCRYPTO BARK TO THE MOON
+        $SCRYPTO on Radix
       </div>
 
       {/* Judul utama */}
