@@ -31,12 +31,12 @@ export default function Header({
         w-full
         bg-white/3
         flex
+        flex-wrap
         items-center
         justify-between
-        px-5
-        sm:px-35
-        py-5
-        gap-5
+        px-4 sm:px-10 lg:px-35
+        py-4 sm:py-5
+        gap-4
         z-50
       ">
         {/* Bagian Kiri: Logo dan Nama Brand */}
@@ -52,7 +52,7 @@ export default function Header({
         </div>
 
         {/* Bagian Tengah: Navigasi */}
-        <nav className="hidden md:flex flex-1 justify-center items-center space-x-8">
+        <nav className="hidden md:flex flex-1 justify-center items-center gap-6 flex-wrap">
           {navLinks.map((link) => (
             <a
               key={link.label}
