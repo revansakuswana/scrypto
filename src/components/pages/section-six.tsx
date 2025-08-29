@@ -39,7 +39,7 @@ export default function SectionSix() {
         Pack Vision
       </div>
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-pink-500 uppercase tracking-wider">
+        <h2 className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
           Pack Vision Unleashed
         </h2>
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
