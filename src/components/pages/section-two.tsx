@@ -5,7 +5,7 @@ import {
   IconRocket,
 } from "@tabler/icons-react";
 
-import WolfImage from "../../../public/logo-wolf.png";
+import WolfImage from "../../../public/logo-header.png";
 
 export default function SectionTwo() {
   const features = [
@@ -18,7 +18,7 @@ export default function SectionTwo() {
     {
       icon: <IconUsers size={42} className="text-blue-400" />,
       title: "Community Driven",
-      description: "By the pack, for the pack",
+      description: "From community, to the community",
       color: "text-blue-400",
     },
     {
@@ -30,7 +30,7 @@ export default function SectionTwo() {
     {
       icon: <IconRocket size={42} className="text-purple-400" />,
       title: "To The Moon",
-      description: "Woof woof! 🚀",
+      description: "Woof woof!",
       color: "text-purple-400",
     },
   ];
@@ -66,7 +66,7 @@ export default function SectionTwo() {
         mb-6
       ">
         <img src="/logo-heading.png" alt="Logo" className="w-4 h-4 mx-auto" />
-        $SCRYPTO BARK TO THE MOON
+        $SCRYPTO on Radix
       </div>
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-pink-500 uppercase tracking-wider">
@@ -81,11 +81,9 @@ export default function SectionTwo() {
         {/* Kolom Kiri: Teks & Features */}
         <div className="flex flex-col gap-8 text-left">
           <p className="text-lg  text-gray-400  leading-relaxed">
-            Cyber-enhanced loyalty meets meme coin madness.
-            <span className="font-bold text-purple-500">$SCRYPTO</span> runs
-            wild on
-            <span className="font-bold text-blue-400"> Radix DLT</span> with
-            pure pack energy.
+            Inspired by the futuristic and loyal vibe of a cyber- enhanced
+            husky, Scrypto is a wild, community-driven meme coin that embodies
+            strength, adaptability, and innovation within the Radix ecosystem.
           </p>
           <p className="text-lg  text-gray-400  leading-relaxed">
             We're the digital wolves of crypto. No rug pulls, just neon vibes
