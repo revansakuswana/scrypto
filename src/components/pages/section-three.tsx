@@ -37,10 +37,11 @@ export default function SectionThree() {
         GRAB IT NOW!
       </div>
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-pink-500 uppercase tracking-wider mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-pink-500  tracking-wider mb-4">
           Grab Your $SCRYPTO
         </h2>
-        <p className="text-lg text-gray-300">
+        <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full "></div>
+        <p className="text-lg text-gray-300 mt-4">
           Join the cyber pack, unleash the moon vibes.
         </p>
       </div>
