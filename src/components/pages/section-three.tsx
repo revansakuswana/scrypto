@@ -5,7 +5,6 @@ import {
   IconBolt,
   IconExternalLink,
   IconArrowRight,
-  IconShoppingCartPlus,
 } from "@tabler/icons-react";
 
 import WolfImage from "../../../public/logo-wolf.png";
@@ -84,76 +83,11 @@ export default function SectionThree() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Kolom Kiri: Langkah-langkah */}
         <div className="flex flex-col gap-4">
-          {steps.map((item, index) => (
-            <React.Fragment key={item.step}>
-              <div
-                className={`
-                  bg-gray-900/40 
-                  p-6 
-                  rounded-lg 
-                  flex 
-                  items-center 
-                  text-left
-                  gap-6
-                  border
-                  ${item.borderColor}
-                `}>
-                <div
-                  className="
-                  text-black
-                    flex-shrink-0 
-                    w-12 h-12 
-                    rounded-full 
-                    bg-pink-500 
-                    flex 
-                    items-center 
-                    justify-center 
-                    font-bold 
-                    text-xl
-                  ">
-                  {item.step}
-                </div>
-                <div className="flex-grow">
-                  <h3 className={`font-bold text-xl mb-1 ${item.color}`}>
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-400">{item.description}</p>
-                </div>
-                <div className="text-gray-500">{item.icon}</div>
-              </div>
-
-              {/* Tampilkan panah jika bukan item terakhir */}
-              {index < steps.length - 1 && (
-                <div className="flex justify-center my-2">
-                  <IconArrowRight
-                    size={28}
-                    className={steps[index + 1].color}
-                  />
-                </div>
-              )}
-            </React.Fragment>
-          ))}
-          {/* Tombol Aksi di Bawah */}
-          <div className="text-center mt-8">
-            <button
-              className="
-            flex items-center gap-3
-            mx-auto 
-            px-8 py-4 
-            rounded-lg 
-            font-bold 
-            text-lg
-            text-black
-            bg-gradient-to-r from-blue-500 to-cyan-400 
-            hover:opacity-90 transition-opacity
-          ">
-              <IconExternalLink size={24} />
-              <span>BUY $SCRYPTO NOW</span>
-            </button>
-            <p className="text-gray-500 mt-3 text-sm">
-              Redirects to DEX for trading
-            </p>
-          </div>
+          <iframe
+            src="https://astrolescent.com/widget?to=resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c&amount=100"
+            width="467px"
+            height="535px"
+            className="mx-auto rounded-xl"></iframe>
         </div>
 
         {/* Kolom Kanan: Gambar */}
