@@ -71,7 +71,7 @@ export default function SectionTwo() {
         $SCRYPTO on Radix
       </div>
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-pink-500 uppercase tracking-wider">
+        <h2 className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
           Cyber Pack Unleashed
         </h2>
         {/* Aksen garis bawah */}
