@@ -13,7 +13,7 @@ export default function SectionSix() {
       justify-center
       text-center
       text-white
-      pt-20
+      py-20
       px-5
       sm:px-35
       sm:py-30
