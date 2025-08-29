@@ -1,5 +1,5 @@
 import { IconMenu2 } from "@tabler/icons-react";
-import React, { useState } from "react";
+import { useState } from "react";
 
 interface HeaderProps {
   brandName?: string;
@@ -33,14 +33,19 @@ export default function Header({
         flex
         items-center
         justify-between
-        px-35
+        px-5
+        sm:px-35
         py-5
         gap-5
         z-50
       ">
         {/* Bagian Kiri: Logo dan Nama Brand */}
         <div className="flex items-center flex-shrink-0">
-          <img src="/logo.png" alt="Logo" className="w-8 h-8 mr-4" />
+          <img
+            src="/public/logo-header.png"
+            alt="Logo"
+            className="w-8 h-8 mr-4"
+          />
           <span className="text-white text-2xl font-normal uppercase tracking-wider">
             {brandName}
           </span>
