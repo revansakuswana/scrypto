@@ -46,7 +46,7 @@ export default function Header({
             alt="Logo"
             className="w-8 h-8 mr-4"
           />
-          <span className="text-white text-2xl font-normal uppercase tracking-wider">
+          <span className="text-white text-2xl font-normal tracking-wider">
             {brandName}
           </span>
         </div>
@@ -136,7 +136,6 @@ export default function Header({
                 text-white
                 text-2xl
                 font-semibold
-                uppercase
                 tracking-wide
                 hover:text-purple-400
                 transition-colors
