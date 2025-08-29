@@ -3,7 +3,6 @@ import {
   IconHeart,
   IconMessageCircle,
   IconShare,
-  IconFlame,
 } from "@tabler/icons-react";
 
 export default function SectionFive() {
