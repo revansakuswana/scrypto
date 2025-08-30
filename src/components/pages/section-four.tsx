@@ -130,11 +130,11 @@ export default function SectionFour() {
         </div>
 
         {/* Grid Kartu Statistik */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 w-full max-w-6xl mx-auto px-4 overflow-hidden break-words">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className={`bg-gray-900/40 p-6 rounded-lg border text-center ${stat.color}`}>
+              className={`bg-gray-900/40 p-6 rounded-lg border text-center ${stat.color} overflow-hidden`}>
               <div className="flex justify-center">{stat.icon}</div>
               <p className={`text-3xl font-bold my-2 ${stat.color}`}>
                 {stat.title}
