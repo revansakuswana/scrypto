@@ -1,10 +1,11 @@
+import { useEffect, useRef, useState } from "react";
 import {
   IconCurrencyDollar,
   IconTrendingUp,
   IconChartBar,
   IconClock,
-  IconArrowUpRight,
 } from "@tabler/icons-react";
+import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
 
 export default function SectionFour() {
   const stats = [
@@ -92,7 +93,7 @@ export default function SectionFour() {
         {/* Area Grafik (menggunakan posisi relatif & absolut) */}
         <div className="relative h-[500px] flex justify-center items-center">
           {/* Latar Belakang Grafik Utama (Bar Chart) */}
-          <div className="w-full max-w-4xl h-[400px] bg-gray-900/40 border border-gray-700/50 rounded-lg p-8 flex flex-col justify-between">
+          {/* <div className="w-full max-w-4xl h-[400px] bg-gray-900/40 border border-gray-700/50 rounded-lg p-8 flex flex-col justify-between">
             <h3 className="font-bold text-xl text-gray-300">
               This years growth
             </h3>
@@ -104,10 +105,10 @@ export default function SectionFour() {
                   style={{ height: `${height}%` }}></div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Kartu "Analytics" (Absolute) */}
-          <div
+          {/* <div
             className="
             absolute bottom-0 left-0 lg:left-24
             w-64 h-48
@@ -116,6 +117,7 @@ export default function SectionFour() {
           ">
             <p className="font-semibold text-gray-300 mb-2">Analytics</p>
             {/* Mock Radial Chart */}
+          {/*}
             <div className="relative w-24 h-24 mx-auto flex items-center justify-center rounded-full bg-gray-800">
               <div
                 className="absolute w-full h-full rounded-full"
@@ -129,7 +131,7 @@ export default function SectionFour() {
           </div>
 
           {/* Kartu "KPIs" (Absolute) */}
-          <div
+          {/* <div
             className="
             absolute top-0 right-0 lg:right-24
             w-60
@@ -145,6 +147,26 @@ export default function SectionFour() {
                 <span>15%</span>
               </div>
             </div>
+          </div> */}
+
+          {/* Area Grafik Diganti dengan Widget TradingView */}
+          <div className="w-full max-w-6xl h-[500px] mx-auto">
+            <AdvancedRealTimeChart
+              theme="dark"
+              symbol="BITGET:BITCOINUSDT"
+              width="100%"
+              height="100%"
+              autosize
+              style="1"
+              locale="en"
+              timezone="Etc/UTC"
+              interval="240" // 240 menit = 4 Jam
+              allow_symbol_change={true}
+              hide_side_toolbar={false}
+              details={true}
+              studies={["Volume@tv-basicstudies"]} // Menambahkan studi volume
+              container_id="tradingview_chart_container"
+            />
           </div>
         </div>
       </div>
