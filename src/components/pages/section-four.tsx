@@ -8,28 +8,73 @@ import {
 import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
 
 export default function SectionFour() {
-  const stats = [
+  const [stats, setStats] = useState([
     {
-      icon: <IconCurrencyDollar size={28} className="text-purple-400" />,
-      value: "$0.00123",
+      icon: <IconCurrencyDollar size={28} className="text-gray-400" />,
+      value: "-",
       label: "Current Price",
     },
     {
-      icon: <IconTrendingUp size={28} className="text-green-400" />,
-      value: "+420.69%",
+      icon: <IconTrendingUp size={28} className="text-gray-400" />,
+      value: "-",
       label: "24h Change",
     },
     {
-      icon: <IconChartBar size={28} className="text-blue-400" />,
-      value: "$42M",
+      icon: <IconChartBar size={28} className="text-gray-400" />,
+      value: "-",
       label: "Market Cap",
     },
     {
-      icon: <IconClock size={28} className="text-orange-400" />,
-      value: "$69K",
+      icon: <IconClock size={28} className="text-gray-400" />,
+      value: "-",
       label: "24h Volume",
     },
-  ];
+  ]);
+
+  useEffect(() => {
+    async function fetchTokenData() {
+      try {
+        const res = await fetch("https://api.ociswap.com/tokens/scrypto");
+        const data = await res.json();
+        console.log("Token data:", data);
+        // contoh data structure yang diharapkan
+        const priceNow = parseFloat(data.price?.usd?.now ?? "0");
+        const price24h = parseFloat(data.price?.usd?.["24h"] ?? "0");
+        const change24h =
+          price24h > 0 ? ((priceNow - price24h) / price24h) * 100 : 0;
+        const marketCap = parseFloat(
+          data.market_cap?.circulating?.usd?.now ?? "0"
+        );
+        const volume24h = parseFloat(data.volume?.usd?.["24h"] ?? "0");
+
+        setStats([
+          {
+            icon: <IconCurrencyDollar size={28} className="text-purple-400" />,
+            value: `$${priceNow.toString().slice(0, 10)}`,
+            label: "Current Price",
+          },
+          {
+            icon: <IconTrendingUp size={28} className="text-green-400" />,
+            value: `${change24h > 0 ? "+" : ""}${change24h.toFixed(2)}%`,
+            label: "24h Change",
+          },
+          {
+            icon: <IconChartBar size={28} className="text-blue-400" />,
+            value: `$${(marketCap / 1e6).toFixed(2)}M`,
+            label: "Market Cap",
+          },
+          {
+            icon: <IconClock size={28} className="text-orange-400" />,
+            value: `$${(volume24h / 1e3).toFixed(2)}K`,
+            label: "24h Volume",
+          },
+        ]);
+      } catch (err) {
+        console.error("Error fetching token data", err);
+      }
+    }
+    fetchTokenData();
+  }, []);
 
   const barChartData = [60, 40, 80, 75, 30, 70, 50, 95, 65, 45, 85, 100];
 
