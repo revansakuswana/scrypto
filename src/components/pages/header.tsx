@@ -43,8 +43,8 @@ export default function Header({
         <a href="#home">
           <div className="flex items-center flex-shrink-0">
             <img
-              src="/public/logo-wolf.png"
-              alt="Logo"
+              src="/logo-header.png"
+              alt="Logo navbar"
               className="w-8 h-8 mr-4"
             />
             <span className="text-white text-2xl font-normal tracking-wider">
