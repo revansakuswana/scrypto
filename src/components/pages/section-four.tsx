@@ -343,24 +343,27 @@ export default function SectionFour() {
 
         {/* Area Grafik (menggunakan posisi relatif & absolut) */}
         <div className="relative flex flex-col gap-6 justify-center items-center">
-          <div className="text-center">
-            <motion.h2
-              initial={{ scale: 0.9, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
+          <div>
+            <div className="text-center">
+              <motion.h2
+                initial={{ scale: 0.9, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-4xl md:text-5xl font-bold text-pink-500 mb-4 tracking-wider">
+                View Chart
+              </motion.h2>
+            </div>
+            <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
-              View Chart
-            </motion.h2>
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-lg text-gray-300 mt-4">
+              Scrypto Price (USD)
+            </motion.p>
           </div>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg text-gray-300">
-            Scrypto Price (USD)
-          </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
