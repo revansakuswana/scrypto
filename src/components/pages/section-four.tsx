@@ -273,12 +273,18 @@ export default function SectionFour() {
                 }}
                 options={{
                   theme: "dark2",
+                  title: {
+                    text: "StockChart with Date-Time Axis",
+                    padding: 10,
+                  },
+                  subtitles: [
+                    {
+                      text: "Scrypto Price (USD)",
+                      padding: 5,
+                    },
+                  ],
                   charts: [
                     {
-                      axisY: { prefix: "$" },
-                      toolTip: {
-                        shared: true,
-                      },
                       axisX: {
                         crosshair: {
                           enabled: true,
@@ -286,42 +292,14 @@ export default function SectionFour() {
                         },
                       },
                       axisY: {
-                        crosshair: {
-                          enabled: true,
-                          snapToDataPoint: true,
-                        },
+                        prefix: "$",
                       },
                       data: [
                         {
                           type: "candlestick",
+                          xValueType: "dateTime",
                           yValueFormatString: "$#,###.########",
                           dataPoints: chartData.candles,
-                        },
-                      ],
-                    },
-                    {
-                      height: 100,
-                      axisY: { prefix: "$" },
-                      toolTip: {
-                        shared: true,
-                      },
-                      axisX: {
-                        crosshair: {
-                          enabled: true,
-                          snapToDataPoint: true,
-                        },
-                      },
-                      axisY: {
-                        crosshair: {
-                          enabled: true,
-                          snapToDataPoint: true,
-                        },
-                      },
-                      data: [
-                        {
-                          type: "column",
-                          yValueFormatString: "$#,###.########",
-                          dataPoints: chartData.volumes,
                         },
                       ],
                     },

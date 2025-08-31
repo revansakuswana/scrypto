@@ -10,9 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@canvasjs/react-stockcharts": "^1.0.2",
     "@tabler/icons-react": "^3.34.1",
     "@tailwindcss/vite": "^4.1.12",
-    "lightweight-charts": "^5.0.8",
+    "chart.js": "^4.5.0",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "chartjs-chart-financial": "^0.2.1",
+    "lightweight-charts": "^4.2.3",
     "path": "^0.12.7",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
