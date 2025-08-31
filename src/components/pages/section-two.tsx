@@ -76,7 +76,7 @@ export default function SectionTwo() {
         <img src="/logo-heading.png" alt="Logo" className="w-4 h-4 mx-auto" />
         $SCRYPTO on Radix
       </div>
-      <div className="text-center mb-12">
+      <div className="text-center">
         <motion.h2
           initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -93,7 +93,7 @@ export default function SectionTwo() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Kolom Kiri: Teks & Features */}
         <div className="flex flex-col gap-8 text-left">
-          <p className="text-lg  text-gray-400  leading-relaxed">
+          <p className="text-lg text-gray-400 mt-4 leading-relaxed">
             Inspired by the futuristic and loyal vibe of a cyber- enhanced
             husky, Scrypto is a wild, community-driven meme coin that embodies
             strength, adaptability, and innovation within the Radix ecosystem.
