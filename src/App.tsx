@@ -6,6 +6,7 @@ import SectionFour from "@/components/pages/section-four";
 import SectionFive from "@/components/pages/section-five";
 import SectionSix from "@/components/pages/section-six";
 import SectionSeven from "@/components/pages/section-seven";
+import SectionEight from "@/components/pages/section-eight";
 import "./App.css";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         sectionFive={<SectionFive />}
         sectionSix={<SectionSix />}
         sectionSeven={<SectionSeven />}
+        sectionEight={<SectionEight />}
       />
     </>
   );

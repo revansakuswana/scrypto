@@ -11,6 +11,7 @@ interface HomePageTemplateProps {
   sectionFive: React.ReactNode;
   sectionSix: React.ReactNode;
   sectionSeven: React.ReactNode;
+  sectionEight: React.ReactNode;
 }
 
 const HomePageTemplate: React.FC<HomePageTemplateProps> = ({
@@ -21,6 +22,7 @@ const HomePageTemplate: React.FC<HomePageTemplateProps> = ({
   sectionFive,
   sectionSix,
   sectionSeven,
+  sectionEight,
 }) => {
   return (
     <div>
@@ -33,6 +35,7 @@ const HomePageTemplate: React.FC<HomePageTemplateProps> = ({
         {sectionFive}
         {sectionSix}
         {sectionSeven}
+        {sectionEight}
       </main>
       <Footer />
     </div>
