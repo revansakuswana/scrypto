@@ -37,6 +37,7 @@ export default function SectionTwo() {
 
   return (
     <section
+      id="about"
       className="
       w-full 
       flex 

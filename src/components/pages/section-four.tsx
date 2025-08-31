@@ -46,6 +46,8 @@ export default function SectionFour() {
     isLoaded: false,
   });
 
+  const [selectedRange, setSelectedRange] = useState("24h");
+
   useEffect(() => {
     async function fetchTokenData() {
       try {
@@ -115,7 +117,16 @@ export default function SectionFour() {
         }
         const events = allEvents.filter((ev: any) => ev.type === "swap");
 
-        const bucketMs = 60 * 60 * 1000; // 1 jam
+        let bucketMs: number;
+        if (selectedRange === "1h") {
+          bucketMs = 5 * 60 * 1000; // 5 minutes per candle
+        } else if (selectedRange === "4h") {
+          bucketMs = 15 * 60 * 1000; // 15 minutes per candle
+        } else if (selectedRange === "24h") {
+          bucketMs = 60 * 60 * 1000; // 1 hour per candle
+        } else {
+          bucketMs = 24 * 60 * 60 * 1000; // 1 day per candle for All
+        }
         const ohlc: Record<
           number,
           { o: number; h: number; l: number; c: number; v: number }
@@ -176,10 +187,11 @@ export default function SectionFour() {
       }
     }
     fetchEvents();
-  }, []);
+  }, [selectedRange]);
 
   return (
     <section
+      id="chart"
       className="
       w-full 
       flex 
@@ -264,6 +276,21 @@ export default function SectionFour() {
                   charts: [
                     {
                       axisY: { prefix: "$" },
+                      toolTip: {
+                        shared: true,
+                      },
+                      axisX: {
+                        crosshair: {
+                          enabled: true,
+                          snapToDataPoint: true,
+                        },
+                      },
+                      axisY: {
+                        crosshair: {
+                          enabled: true,
+                          snapToDataPoint: true,
+                        },
+                      },
                       data: [
                         {
                           type: "candlestick",
@@ -275,6 +302,21 @@ export default function SectionFour() {
                     {
                       height: 100,
                       axisY: { prefix: "$" },
+                      toolTip: {
+                        shared: true,
+                      },
+                      axisX: {
+                        crosshair: {
+                          enabled: true,
+                          snapToDataPoint: true,
+                        },
+                      },
+                      axisY: {
+                        crosshair: {
+                          enabled: true,
+                          snapToDataPoint: true,
+                        },
+                      },
                       data: [
                         {
                           type: "column",
@@ -302,6 +344,7 @@ export default function SectionFour() {
                     },
                   },
                   rangeSelector: {
+                    selectedRange: selectedRange,
                     inputFields: {
                       startValue: chartData.closes.length
                         ? chartData.closes[0].x
@@ -314,6 +357,9 @@ export default function SectionFour() {
                       { label: "24h", range: 24, rangeType: "hour" },
                       { label: "All", rangeType: "all" },
                     ],
+                    buttonClick: (e: any) => {
+                      setSelectedRange(e.rangeType === "all" ? "all" : e.label);
+                    },
                   },
                 }}
               />

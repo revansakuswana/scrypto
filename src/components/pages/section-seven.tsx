@@ -5,6 +5,7 @@ import WolfImage from "../../../public/logo-header.png";
 export default function SectionSeven() {
   return (
     <section
+      id="vision"
       className="
       w-full 
       flex 

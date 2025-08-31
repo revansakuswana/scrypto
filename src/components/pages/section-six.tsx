@@ -29,6 +29,7 @@ export default function SectionFive() {
 
   return (
     <section
+      id="gallery"
       className="
       w-full 
       flex 

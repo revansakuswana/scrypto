@@ -14,7 +14,7 @@ export default function Header({
     { to: "#home", label: "Home" },
     { to: "#about", label: "About" },
     { to: "#chart", label: "Chart" },
-    { to: "#buy", label: "Buy" },
+    { to: "#buy-now", label: "Buy" },
     { to: "#gallery", label: "Gallery" },
     { to: "#vision", label: "Vision" },
   ];
@@ -40,17 +40,18 @@ export default function Header({
         z-50
       ">
         {/* Bagian Kiri: Logo dan Nama Brand */}
-        <div className="flex items-center flex-shrink-0">
-          <img
-            src="/public/logo-header.png"
-            alt="Logo"
-            className="w-8 h-8 mr-4"
-          />
-          <span className="text-white text-2xl font-normal tracking-wider">
-            {brandName}
-          </span>
-        </div>
-
+        <a href="#home">
+          <div className="flex items-center flex-shrink-0">
+            <img
+              src="/public/logo-header.png"
+              alt="Logo"
+              className="w-8 h-8 mr-4"
+            />
+            <span className="text-white text-2xl font-normal tracking-wider">
+              {brandName}
+            </span>
+          </div>
+        </a>
         {/* Bagian Tengah: Navigasi */}
         <nav className="hidden md:flex flex-1 justify-center items-center gap-6 flex-wrap">
           {navLinks.map((link) => (
@@ -72,9 +73,10 @@ export default function Header({
 
         {/* Bagian Kanan: Tombol "Buy now" dan Hamburger */}
         <div className="flex items-center flex-shrink-0">
-          <button
-            onClick={onBuyButtonClick}
-            className="
+          <a href="#buy-now">
+            <button
+              onClick={onBuyButtonClick}
+              className="
             hidden md:block
             px-6 py-2
             text-black
@@ -85,8 +87,9 @@ export default function Header({
             transition-opacity
             duration-300
           ">
-            Buy now
-          </button>
+              Buy now
+            </button>
+          </a>
 
           {/* Hamburger Menu untuk Mobile */}
           <div className="md:hidden ml-4">
@@ -145,14 +148,15 @@ export default function Header({
               {link.label}
             </a>
           ))}
-          <button
-            onClick={() => {
-              setIsMenuOpen(false);
-              if (onBuyButtonClick) {
-                onBuyButtonClick();
-              }
-            }}
-            className="
+          <a href="#buy-now">
+            <button
+              onClick={() => {
+                setIsMenuOpen(false);
+                if (onBuyButtonClick) {
+                  onBuyButtonClick();
+                }
+              }}
+              className="
               px-8 py-3
               text-black
               font-bold
@@ -163,8 +167,9 @@ export default function Header({
               duration-300
               text-lg
             ">
-            Buy now
-          </button>
+              Buy now
+            </button>
+          </a>
         </nav>
       </div>
     </>

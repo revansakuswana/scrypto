@@ -7,6 +7,7 @@ import {
 export default function SectionOne() {
   return (
     <section
+    id="home"
       className="
       w-full 
       flex 
@@ -90,8 +91,9 @@ export default function SectionOne() {
         gap-6
       ">
         {/* Tombol "Buy Now" */}
-        <button
-          className="
+        <a href="#buy-now">
+          <button
+            className="
           flex items-center gap-2 
           px-6 py-5 
           rounded-lg 
@@ -99,9 +101,10 @@ export default function SectionOne() {
           bg-gradient-to-r from-pink-500 to-purple-600 
           hover:opacity-90 transition-opacity
         ">
-          <IconTrendingUp size={20} />
-          <span>BUY NOW</span>
-        </button>
+            <IconTrendingUp size={20} />
+            <span>BUY NOW</span>
+          </button>
+        </a>
 
         {/* Tombol "Join Telegram" */}
         <a
@@ -123,16 +126,18 @@ export default function SectionOne() {
         </a>
 
         {/* Tombol "View Chart" */}
-        <button
-          className="
+        <a href="#buy-now">
+          <button
+            className="
           flex items-center gap-2 
           font-semibold 
           text-purple-400
           hover:text-white transition-colors
         ">
-          <IconExternalLink size={20} />
-          <span>VIEW CHART</span>
-        </button>
+            <IconExternalLink size={20} />
+            <span>VIEW CHART</span>
+          </button>
+        </a>
       </div>
     </section>
   );

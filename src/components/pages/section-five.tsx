@@ -3,6 +3,7 @@ import { IconTrendingUp } from "@tabler/icons-react";
 export default function SectionFive() {
   return (
     <section
+      id="buy-now"
       className="
       w-full 
       flex 
@@ -47,19 +48,15 @@ export default function SectionFive() {
 
       <div className="flex flex-col gap-8">
         {/* Tombol "Buy Now" */}
-        <button
-          className="
-          flex items-center gap-2 
-          px-6 py-5 
-          rounded-lg 
-          font-bold
-          text-black 
-          bg-gradient-to-r from-pink-500 to-purple-600 
-          hover:opacity-90 transition-opacity
-        ">
-          <IconTrendingUp size={20} />
-          <span>BUY NOW</span>
-        </button>
+        <a
+          href="https://singularityx.net/nfts"
+          target="_blank"
+          rel="noopener noreferrer">
+          <button className="flex items-center gap-2 px-6 py-5 rounded-lg font-bold text-black bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 transition-opacity">
+            <IconTrendingUp size={20} />
+            <span>BUY NOW</span>
+          </button>
+        </a>
       </div>
     </section>
   );
