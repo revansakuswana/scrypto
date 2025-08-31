@@ -50,7 +50,7 @@ export default function SectionFive() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
-          Title DEXs
+          DEXs
         </motion.h2>
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
         <motion.p
@@ -59,11 +59,11 @@ export default function SectionFive() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-6 text-lg text-gray-300 flex items-center justify-center gap-2">
-          Desk SCRYPTO Available on Several DEXs
+          DEXs SCRYPTO Available on Several DEXs
         </motion.p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-10">
           <a
-            href="https://ociswap.com"
+            href="https://astrl.trade"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
@@ -72,10 +72,10 @@ export default function SectionFive() {
               alt="Ociswap"
               className="w-40 h-40 object-contain rounded-full"
             />
-            <span className="text-sm">ociswap.com</span>
+            <span className="text-sm">astrl.trade</span>
           </a>
           <a
-            href="https://astrl.trade"
+            href="https://ociswap.com"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
@@ -84,10 +84,10 @@ export default function SectionFive() {
               alt="Astrl Trade"
               className="w-40 h-40 object-contain rounded-full"
             />
-            <span className="text-sm">astrl.trade</span>
+            <span className="text-sm">ociswap.com</span>
           </a>
           <a
-            href="https://defiplaza.net"
+            href="https://caviarnine.com"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
@@ -96,10 +96,10 @@ export default function SectionFive() {
               alt="Defiplaza"
               className="w-40 h-40 object-contain rounded-full"
             />
-            <span className="text-sm">defiplaza.net</span>
+            <span className="text-sm">caviarnine.com</span>
           </a>
           <a
-            href="https://caviarnine.com"
+            href="https://defiplaza.net"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
@@ -108,7 +108,7 @@ export default function SectionFive() {
               alt="Caviarnine"
               className="w-40 h-40 object-contain rounded-full"
             />
-            <span className="text-sm">caviarnine.com</span>
+            <span className="text-sm">defiplaza.net</span>
           </a>
         </div>
       </div>
