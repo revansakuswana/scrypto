@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 export default function SectionFive() {
   return (
     <motion.section
-      id="buy-now"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -69,9 +68,9 @@ export default function SectionFive() {
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
             <img
-              src="/public/WhatsApp Image 2025-08-31 at 22.43.12 (1).jpeg"
+              src="/WhatsApp Image 2025-08-31 at 22.43.12 (1).jpeg"
               alt="Ociswap"
-              className="w-40 h-40 object-contain"
+              className="w-40 h-40 object-contain rounded-2xl"
             />
             <span className="text-sm">ociswap.com</span>
           </a>
@@ -81,9 +80,9 @@ export default function SectionFive() {
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
             <img
-              src="/public/WhatsApp Image 2025-08-31 at 22.43.12.jpeg"
+              src="/WhatsApp Image 2025-08-31 at 22.43.12.jpeg"
               alt="Astrl Trade"
-              className="w-40 h-40 object-contain"
+              className="w-40 h-40 object-contain rounded-2xl"
             />
             <span className="text-sm">astrl.trade</span>
           </a>
@@ -93,9 +92,9 @@ export default function SectionFive() {
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
             <img
-              src="/public/WhatsApp Image 2025-08-31 at 22.43.13 (1).jpeg"
+              src="/WhatsApp Image 2025-08-31 at 22.43.13 (1).jpeg"
               alt="Defiplaza"
-              className="w-40 h-40 object-contain"
+              className="w-40 h-40 object-contain rounded-2xl"
             />
             <span className="text-sm">defiplaza.net</span>
           </a>
@@ -105,9 +104,9 @@ export default function SectionFive() {
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
             <img
-              src="/public/WhatsApp Image 2025-08-31 at 22.43.13.jpeg"
+              src="/WhatsApp Image 2025-08-31 at 22.43.13.jpeg"
               alt="Caviarnine"
-              className="w-40 h-40 object-contain"
+              className="w-40 h-40 object-contain rounded-2xl"
             />
             <span className="text-sm">caviarnine.com</span>
           </a>
