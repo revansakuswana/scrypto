@@ -1,9 +1,14 @@
 import { IconTrendingUp } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 
 export default function SectionFive() {
   return (
-    <section
+    <motion.section
       id="buy-now"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
       className="
       w-full 
       flex 
@@ -17,7 +22,11 @@ export default function SectionFive() {
       sm:px-35
       sm:py-30
     ">
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
         className="
         flex 
         items-center 
@@ -35,18 +44,33 @@ export default function SectionFive() {
       ">
         <img src="/logo-heading.png" alt="Logo" className="w-4 h-4 mx-auto" />
         SCRYPTO NFTS
-      </div>
+      </motion.div>
       <div className="text-center mb-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
+        <motion.h2
+          initial={{ scale: 0.9, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
           SCRYPTO NFTS
-        </h2>
+        </motion.h2>
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
-        <p className="mt-6 text-lg text-gray-300 flex items-center justify-center gap-2">
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-6 text-lg text-gray-300 flex items-center justify-center gap-2">
           2000 cyber husky minted, hold em to get airdrop and other utilities
-        </p>
+        </motion.p>
       </div>
 
-      <div className="flex flex-col gap-8">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+        className="flex flex-col gap-8">
         {/* Tombol "Buy Now" */}
         <a
           href="https://singularityx.net/nfts"
@@ -57,7 +81,7 @@ export default function SectionFive() {
             <span>BUY NOW</span>
           </button>
         </a>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

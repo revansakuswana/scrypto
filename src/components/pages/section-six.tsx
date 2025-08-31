@@ -4,6 +4,7 @@ import {
   IconMessageCircle,
   IconShare,
 } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 
 export default function SectionFive() {
   const memes = [
@@ -28,8 +29,12 @@ export default function SectionFive() {
   ];
 
   return (
-    <section
+    <motion.section
       id="gallery"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
       className="
       w-full 
       flex 
@@ -43,7 +48,11 @@ export default function SectionFive() {
       sm:px-35
       sm:py-30
     ">
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
         className="
         flex 
         items-center 
@@ -61,23 +70,37 @@ export default function SectionFive() {
       ">
         <img src="/logo-heading.png" alt="Logo" className="w-4 h-4 mx-auto" />
         Pack Memes
-      </div>
+      </motion.div>
       <div className="text-center mb-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
+        <motion.h2
+          initial={{ scale: 0.9, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
           Pack Memes Unleashed
-        </h2>
+        </motion.h2>
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
-        <p className="mt-6 text-lg text-gray-300 flex items-center justify-center gap-2">
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-6 text-lg text-gray-300 flex items-center justify-center gap-2">
           Community fire that hits different
-        </p>
+        </motion.p>
       </div>
 
       <div className="flex flex-col gap-8">
         {/* Grid untuk Kartu Meme */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-purple-400">
           {memes.map((meme, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
               className="
                 bg-gray-900/40 rounded-lg border border-purple-400
                 flex flex-col overflow-hidden group
@@ -112,12 +135,16 @@ export default function SectionFive() {
                   <IconShare size={20} />
                 </button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Kartu "Drop Your Fire" */}
-        <div
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.6 }}
           className="
             bg-gray-900/40 rounded-lg border border-purple-400
             flex flex-col items-center justify-center text-center p-8 gap-4
@@ -131,8 +158,8 @@ export default function SectionFive() {
           <a href="#" className="text-cyan-400 font-semibold hover:underline">
             Telegram = meme heaven
           </a>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

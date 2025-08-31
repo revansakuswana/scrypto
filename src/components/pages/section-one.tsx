@@ -3,11 +3,15 @@ import {
   IconMessageCircle,
   IconExternalLink,
 } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 
 export default function SectionOne() {
   return (
-    <section
-    id="home"
+    <motion.section
+      id="home"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
       className="
       w-full 
       flex 
@@ -44,7 +48,10 @@ export default function SectionOne() {
       </div>
 
       {/* Judul utama */}
-      <h1
+      <motion.h1
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
         className="
         text-5xl md:text-7xl
         font-bold
@@ -56,7 +63,7 @@ export default function SectionOne() {
         Bark to the
         <br />
         Moon
-      </h1>
+      </motion.h1>
 
       {/* Subjudul */}
       <p
@@ -80,7 +87,15 @@ export default function SectionOne() {
       </p>
 
       {/* Grup Tombol */}
-      <div
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {},
+          visible: {
+            transition: { staggerChildren: 0.2 },
+          },
+        }}
         className="
         flex 
         flex-col sm:flex-row
@@ -91,7 +106,12 @@ export default function SectionOne() {
         gap-6
       ">
         {/* Tombol "Buy Now" */}
-        <a href="#buy-now">
+        <motion.a
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          href="#buy-now">
           <button
             className="
           flex items-center gap-2 
@@ -104,10 +124,14 @@ export default function SectionOne() {
             <IconTrendingUp size={20} />
             <span>BUY NOW</span>
           </button>
-        </a>
+        </motion.a>
 
         {/* Tombol "Join Telegram" */}
-        <a
+        <motion.a
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
           href="https://t.me/scryptoxrd"
           target="_blank"
           rel="noopener noreferrer">
@@ -123,10 +147,15 @@ export default function SectionOne() {
             <IconMessageCircle size={20} />
             <span>JOIN TELEGRAM</span>
           </button>
-        </a>
+        </motion.a>
 
         {/* Tombol "View Chart" */}
-        <a href="#buy-now">
+        <motion.a
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          href="#buy-now">
           <button
             className="
           flex items-center gap-2 
@@ -137,8 +166,8 @@ export default function SectionOne() {
             <IconExternalLink size={20} />
             <span>VIEW CHART</span>
           </button>
-        </a>
-      </div>
-    </section>
+        </motion.a>
+      </motion.div>
+    </motion.section>
   );
 }

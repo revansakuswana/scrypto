@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import {
   IconCurrencyDollar,
   IconTrendingUp,
@@ -206,13 +207,23 @@ export default function SectionFour() {
   useEffect(() => {
     if (chartData.isLoaded) {
       const chart = new (window as any).CanvasJS.StockChart("chartContainer", {
-        theme: "dark2",
-        title: { text: "Scrypto Price Chart", padding: 10 },
-        subtitles: [{ text: "Scrypto Price (USD)", padding: 5 }],
+        theme: "dark",
+        backgroundColor: "transparent",
+        title: {
+          text: "Scrypto Price Chart",
+          padding: 10,
+          fontColor: "#FFFFFF",
+        },
+        subtitles: [
+          { text: "Scrypto Price (USD)", padding: 5, fontColor: "#FFFFFF" },
+        ],
         charts: [
           {
-            axisX: { crosshair: { enabled: true, snapToDataPoint: true } },
-            axisY: { prefix: "$" },
+            axisX: {
+              crosshair: { enabled: true, snapToDataPoint: true },
+              labelFontColor: "#FFFFFF",
+            },
+            axisY: { prefix: "$", labelFontColor: "#FFFFFF" },
             data: [
               {
                 type: "candlestick",
@@ -237,10 +248,13 @@ export default function SectionFour() {
             labelFormatter: function (e: any) {
               return (window as any).CanvasJS.formatDate(e.value, "DD MMM YY");
             },
+            labelFontColor: "#FFFFFF",
           },
-          axisY: { prefix: "$" },
+          axisY: { prefix: "$", labelFontColor: "#FFFFFF" },
         },
         rangeSelector: {
+          labelFontColor: "#FFFFFF",
+          fontColor: "#FFFFFF",
           inputFields: {
             startValue: chartData.closes.length
               ? chartData.closes[0].x
@@ -265,8 +279,12 @@ export default function SectionFour() {
   }, [chartData]);
 
   return (
-    <section
+    <motion.section
       id="chart"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
       className="
       w-full 
       flex 
@@ -301,24 +319,33 @@ export default function SectionFour() {
       </div>
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
+          <motion.h2
+            initial={{ scale: 0.9, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
             Track the Pack
-          </h2>
+          </motion.h2>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
         </div>
 
         {/* Grid Kartu Statistik */}
         <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 w-full max-w-6xl mx-auto overflow-hidden break-words">
           {stats.map((stat, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
               className={`bg-gray-900/40 p-6 rounded-lg border text-center ${stat.color} overflow-hidden`}>
               <div className="flex justify-center">{stat.icon}</div>
               <p className={`text-3xl font-bold my-2 ${stat.color}`}>
                 {stat.title}
               </p>
               <p className="text-gray-400">{stat.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -338,7 +365,12 @@ export default function SectionFour() {
             <IconExternalLink size={20} />
             <span>VIEW CHART</span>
           </button>
-          <div className="w-full max-w-6xl h-[500px] mx-auto flex items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="w-full max-w-6xl h-[500px] mx-auto flex items-center justify-center">
             {chartData.isLoaded ? (
               <div
                 id="chartContainer"
@@ -350,9 +382,9 @@ export default function SectionFour() {
                 <p className="text-gray-400">Loading chart data...</p>
               </div>
             )}
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

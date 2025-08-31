@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   IconBolt,
   IconUsers,
@@ -36,8 +37,12 @@ export default function SectionTwo() {
   ];
 
   return (
-    <section
+    <motion.section
       id="about"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
       className="
       w-full 
       flex 
@@ -72,9 +77,14 @@ export default function SectionTwo() {
         $SCRYPTO on Radix
       </div>
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
+        <motion.h2
+          initial={{ scale: 0.9, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
           Cyber Pack Unleashed
-        </h2>
+        </motion.h2>
         {/* Aksen garis bawah */}
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
       </div>
@@ -92,8 +102,12 @@ export default function SectionTwo() {
           {/* Grid untuk Feature Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
             {features.map((feature, index) => (
-              <div
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
                 className={`
                     bg-transparent
                     border
@@ -109,20 +123,25 @@ export default function SectionTwo() {
                   {feature.title}
                 </h3>
                 <p className="text-gray-400">{feature.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
         {/* Kolom Kanan: Gambar */}
-        <div className="flex justify-center items-center">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-center items-center">
           <img
             src={WolfImage}
             alt="Cyber Wolf"
             className="w-full max-w-sm md:max-w-md"
           />
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

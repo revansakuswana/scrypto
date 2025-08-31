@@ -1,11 +1,16 @@
 import { IconEye, IconUsers, IconBolt } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 
 import WolfImage from "../../../public/logo-header.png";
 
 export default function SectionSeven() {
   return (
-    <section
+    <motion.section
       id="vision"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
       className="
       w-full 
       flex 
@@ -20,7 +25,11 @@ export default function SectionSeven() {
       sm:py-30
     ">
       {/* Judul Section */}
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
         className="
         flex 
         items-center 
@@ -38,11 +47,16 @@ export default function SectionSeven() {
       ">
         <img src="/logo-heading.png" alt="Logo" className="w-4 h-4 mx-auto" />
         Pack Vision
-      </div>
+      </motion.div>
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
+        <motion.h2
+          initial={{ scale: 0.9, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
           Pack Vision Unleashed
-        </h2>
+        </motion.h2>
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
       </div>
 
@@ -51,7 +65,11 @@ export default function SectionSeven() {
         {/* Kolom Kiri: Vision, Mission & Kartu Kecil */}
         <div className="flex flex-col gap-6">
           {/* Kartu Vision */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             className="
               bg-gray-900/40 p-6 rounded-lg border border-purple-400
               flex gap-6 items-start
@@ -72,10 +90,14 @@ export default function SectionSeven() {
                 on Radix.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Kartu Mission */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             className="
               bg-gray-900/40 p-6 rounded-lg border border-cyan-400
               flex gap-6 items-start
@@ -100,12 +122,16 @@ export default function SectionSeven() {
                 and loyal community power.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Grid untuk Kartu Kecil di Bawah */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Kartu Anti-Rug */}
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0 }}
               className="
                 bg-gray-900/40 p-6 rounded-lg border border-pink-400
                 flex flex-col items-center text-center gap-3
@@ -113,9 +139,13 @@ export default function SectionSeven() {
               <IconUsers size={32} className="text-pink-400" />
               <h4 className="text-xl font-bold">Community Driven</h4>
               <p className="text-gray-400">From community, to the community</p>
-            </div>
+            </motion.div>
             {/* Kartu Innovation */}
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               className="
                 bg-gray-900/40 p-6 rounded-lg border border-purple-400
                 flex flex-col items-center text-center gap-3
@@ -123,19 +153,24 @@ export default function SectionSeven() {
               <IconBolt size={32} className="text-purple-400" />
               <h4 className="text-xl font-bold">Innovation</h4>
               <p className="text-gray-400">Radix Technology</p>
-            </div>
+            </motion.div>
           </div>
         </div>
 
         {/* Kolom Kanan: Gambar dengan Tag */}
-        <div className="flex justify-center items-center relative">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-center items-center relative">
           <img
             src={WolfImage}
             alt="Cyber Wolf Vision"
             className="w-full max-w-sm"
           />
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
