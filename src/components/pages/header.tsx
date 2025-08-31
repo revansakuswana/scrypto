@@ -1,4 +1,4 @@
-import { IconMenu2 } from "@tabler/icons-react";
+import { IconMenu2, IconTrendingUp } from "@tabler/icons-react";
 import { useState } from "react";
 
 interface HeaderProps {
@@ -77,17 +77,18 @@ export default function Header({
             <button
               onClick={onBuyButtonClick}
               className="
-            hidden md:block
-            px-6 py-2
-            text-black
-            font-normal
-            rounded-lg
-            bg-gradient-to-r from-purple-600 to-blue-700
-            hover:opacity-90
-            transition-opacity
-            duration-300
-          ">
-              Buy now
+              hidden md:flex items-center gap-2
+              text-black
+              px-4 py-3 
+              font-normal
+              rounded-lg
+              bg-gradient-to-r from-purple-600 to-blue-700
+              hover:opacity-90
+              transition-opacity
+              duration-300
+            ">
+              <IconTrendingUp size={20} />
+              <span>BUY NOW</span>
             </button>
           </a>
 
@@ -157,8 +158,9 @@ export default function Header({
                 }
               }}
               className="
-              px-8 py-3
               text-black
+              flex items-center gap-2
+              px-4 py-3  
               font-bold
               rounded-lg
               bg-gradient-to-r from-purple-600 to-blue-700
@@ -167,7 +169,8 @@ export default function Header({
               duration-300
               text-lg
             ">
-              Buy now
+              <IconTrendingUp size={20} />
+              <span>BUY NOW</span>
             </button>
           </a>
         </nav>
