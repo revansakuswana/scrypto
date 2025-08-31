@@ -1,7 +1,6 @@
 import {
   IconBrandTelegram,
   IconBrandTwitter,
-  IconBrandGithub,
   IconArrowsExchange,
 } from "@tabler/icons-react";
 
@@ -23,21 +22,16 @@ export default function Footer() {
       name: "DEX",
       icon: <IconArrowsExchange size={20} />,
       url: "#",
-    }, // Ganti '#' dengan link DEX
-    {
-      name: "Github",
-      icon: <IconBrandGithub size={20} />,
-      url: "#",
-    }, // Ganti '#' dengan link Github
+    },
   ];
 
   return (
     <footer
       className="bg-[#131117] text-gray-400 px-5 sm:px-10 lg:px-35
         pb-4 sm:pb-5 py-20">
-      <div className="container mx-auto">
+      <div className="container mx-auto justify-between">
         {/* Konten Atas (3 Kolom) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-center md:text-left">
           {/* Kolom 1: Logo & Deskripsi */}
           <div className="flex flex-col items-center md:items-start">
             <div className="flex items-center gap-3 mb-4">
@@ -57,7 +51,7 @@ export default function Footer() {
             <h3 className="font-bold text-lg text-white mb-4">
               Join the Movement
             </h3>
-            <div className="flex justify-between text-center mx-20 sm:mx-0">
+            <div className="flex justify-between text-center px-16 mx-10 sm:mx-0">
               {socialLinks.map((link) => (
                 <a
                   key={link.name}
@@ -70,27 +64,6 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-          </div>
-
-          {/* Kolom 3: Quick Links */}
-          <div className="text-center sm:text-right">
-            <h3 className="font-bold text-lg text-cyan-400 mb-4">
-              Quick Links
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                Contract:{" "}
-                <a href="#" className="text-white hover:underline">
-                  rdt1q...scrypto
-                </a>
-              </li>
-              <li>
-                Network: <span className="text-white">Radix</span>
-              </li>
-              <li>
-                Type: <span className="text-pink-400">Meme Token</span>
-              </li>
-            </ul>
           </div>
         </div>
 
