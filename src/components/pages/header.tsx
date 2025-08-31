@@ -43,7 +43,7 @@ export default function Header({
         <a href="#home">
           <div className="flex items-center flex-shrink-0">
             <img
-              src="/public/logo-header.png"
+              src="/public/logo-wolf.png"
               alt="Logo"
               className="w-8 h-8 mr-4"
             />
