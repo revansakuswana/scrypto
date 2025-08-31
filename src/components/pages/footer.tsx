@@ -22,7 +22,7 @@ export default function Footer() {
     {
       name: "DEX",
       icon: <IconArrowsExchange size={20} />,
-      url: "#",
+      url: "https://ociswap.com/resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c",
     },
   ];
 
@@ -32,8 +32,7 @@ export default function Footer() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="bg-[#131117] text-gray-400 px-5 sm:px-10 lg:px-35 pb-4 sm:pb-5 py-20"
-    >
+      className="bg-[#131117] text-gray-400 px-5 sm:px-10 lg:px-35 pb-4 sm:pb-5 py-20">
       <div className="container mx-auto justify-between">
         {/* Konten Atas (3 Kolom) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-center md:text-left">
@@ -44,8 +43,7 @@ export default function Footer() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="flex items-center gap-3 mb-4"
-            >
+              className="flex items-center gap-3 mb-4">
               <img src={WolfLogo} alt="Logo" className="w-12 h-12" />
               <h3 className="font-bold text-lg text-pink-400">
                 Cyber Pack Energy
@@ -64,8 +62,7 @@ export default function Footer() {
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="font-bold text-lg text-white mb-4"
-            >
+              className="font-bold text-lg text-white mb-4">
               Join the Movement
             </motion.h3>
             <div className="flex justify-between text-center px-16 mx-10 sm:mx-0">
@@ -79,8 +76,7 @@ export default function Footer() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center hover:text-cyan-400 transition-colors"
-                >
+                  className="flex flex-col items-center hover:text-cyan-400 transition-colors">
                   {link.icon}
                   <span className="text-xs font-semibold">{link.name}</span>
                 </motion.a>
@@ -98,12 +94,13 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col sm:flex-row justify-between items-center text-sm"
-        >
+          className="flex flex-col sm:flex-row justify-between items-center text-sm">
           <p>&copy; {new Date().getFullYear()} $SCRYPTO</p>
           <p className="mt-2 sm:mt-0">
             Powered by{" "}
-            <a href="#" className="font-bold text-cyan-400 hover:underline">
+            <a
+              href="https://radixdlt.com"
+              className="font-bold text-cyan-400 hover:underline">
               Radix
             </a>
           </p>
