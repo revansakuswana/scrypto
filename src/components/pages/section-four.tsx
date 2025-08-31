@@ -4,8 +4,12 @@ import {
   IconTrendingUp,
   IconChartBar,
   IconClock,
+  IconExternalLink,
 } from "@tabler/icons-react";
-import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
+import CanvasJSReact from "@canvasjs/react-stockcharts";
+
+var CanvasJS = CanvasJSReact.CanvasJS;
+var CanvasJSStockChart = CanvasJSReact.CanvasJSStockChart;
 
 export default function SectionFour() {
   const [stats, setStats] = useState([
@@ -34,6 +38,13 @@ export default function SectionFour() {
       color: "text-purple-400",
     },
   ]);
+
+  const [chartData, setChartData] = useState({
+    candles: [],
+    volumes: [],
+    closes: [],
+    isLoaded: false,
+  });
 
   useEffect(() => {
     async function fetchTokenData() {
@@ -87,6 +98,86 @@ export default function SectionFour() {
     fetchTokenData();
   }, []);
 
+  useEffect(() => {
+    async function fetchEvents() {
+      try {
+        let cursor = 0;
+        let allEvents: any[] = [];
+
+        while (true) {
+          const res = await fetch(
+            `https://api.ociswap.com/tokens/resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c/events?cursor=${cursor}&limit=100`
+          );
+          const json = await res.json();
+          allEvents = [...allEvents, ...(json.data || [])];
+          if (!json.next_cursor || json.next_cursor === cursor) break;
+          cursor = json.next_cursor;
+        }
+        const events = allEvents.filter((ev: any) => ev.type === "swap");
+
+        const bucketMs = 60 * 60 * 1000; // 1 jam
+        const ohlc: Record<
+          number,
+          { o: number; h: number; l: number; c: number; v: number }
+        > = {};
+
+        for (const ev of events) {
+          const ts = new Date(ev.timestamp).getTime();
+          const bucket = Math.floor(ts / bucketMs) * bucketMs;
+          const price = parseFloat(
+            ev.x?.price?.usd ??
+              ev.y?.price?.usd ??
+              ev.x?.price?.token ??
+              ev.y?.price?.token ??
+              "0"
+          );
+
+          const volume = parseFloat(
+            ev.volume?.usd ??
+              ev.volume?.xrd ??
+              ev.x?.amount?.usd ??
+              ev.y?.amount?.usd ??
+              "0"
+          );
+          if (!price) continue;
+
+          if (!ohlc[bucket]) {
+            ohlc[bucket] = {
+              o: price,
+              h: price,
+              l: price,
+              c: price,
+              v: volume,
+            };
+          } else {
+            ohlc[bucket].h = Math.max(ohlc[bucket].h, price);
+            ohlc[bucket].l = Math.min(ohlc[bucket].l, price);
+            ohlc[bucket].c = price;
+            ohlc[bucket].v += volume;
+          }
+        }
+
+        const candles = Object.entries(ohlc).map(([t, v]) => ({
+          x: new Date(Number(t)),
+          y: [v.o, v.h, v.l, v.c],
+        }));
+        const volumes = Object.entries(ohlc).map(([t, v]) => ({
+          x: new Date(Number(t)),
+          y: v.v,
+        }));
+        const closes = Object.entries(ohlc).map(([t, v]) => ({
+          x: new Date(Number(t)),
+          y: v.c,
+        }));
+
+        setChartData({ candles, volumes, closes, isLoaded: true });
+      } catch (err) {
+        console.error("Error fetching events", err);
+      }
+    }
+    fetchEvents();
+  }, []);
+
   return (
     <section
       className="
@@ -130,7 +221,7 @@ export default function SectionFour() {
         </div>
 
         {/* Grid Kartu Statistik */}
-        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 w-full max-w-6xl mx-auto px-4 overflow-hidden break-words">
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 w-full max-w-6xl mx-auto overflow-hidden break-words">
           {stats.map((stat, index) => (
             <div
               key={index}
@@ -145,24 +236,88 @@ export default function SectionFour() {
         </div>
 
         {/* Area Grafik (menggunakan posisi relatif & absolut) */}
-        <div className="relative h-[500px] flex justify-center items-center">
+        <div className="relative flex flex-col gap-10 justify-center items-center">
+          {/* Tombol "View Chart" */}
+          <button
+            className="
+          flex items-center gap-2 
+          font-semibold 
+          border
+          rounded-lg
+          px-4 py-2
+          text-purple-400
+          hover:text-white transition-colors
+        ">
+            <IconExternalLink size={20} />
+            <span>VIEW CHART</span>
+          </button>
           <div className="w-full max-w-6xl h-[500px] mx-auto">
-            <AdvancedRealTimeChart
-              theme="dark"
-              symbol="BITGET:BITCOINUSDT"
-              width="100%"
-              height="100%"
-              autosize
-              style="1"
-              locale="en"
-              timezone="Etc/UTC"
-              interval="240"
-              allow_symbol_change={true}
-              hide_side_toolbar={false}
-              details={true}
-              studies={["Volume@tv-basicstudies"]}
-              container_id="tradingview_chart_container"
-            />
+            {chartData.isLoaded && (
+              <CanvasJSStockChart
+                containerProps={{
+                  width: "100%",
+                  height: "500px",
+                  margin: "auto",
+                }}
+                options={{
+                  theme: "dark2",
+                  charts: [
+                    {
+                      axisY: { prefix: "$" },
+                      data: [
+                        {
+                          type: "candlestick",
+                          yValueFormatString: "$#,###.########",
+                          dataPoints: chartData.candles,
+                        },
+                      ],
+                    },
+                    {
+                      height: 100,
+                      axisY: { prefix: "$" },
+                      data: [
+                        {
+                          type: "column",
+                          yValueFormatString: "$#,###.########",
+                          dataPoints: chartData.volumes,
+                        },
+                      ],
+                    },
+                  ],
+                  navigator: {
+                    data: [{ dataPoints: chartData.closes }],
+                    slider: {
+                      minimum: chartData.closes.length
+                        ? chartData.closes[0].x
+                        : new Date(),
+                      maximum: new Date(),
+                    },
+                    axisX: {
+                      labelFormatter: function (e: any) {
+                        return CanvasJS.formatDate(e.value, "DD MMM YY");
+                      },
+                    },
+                    axisY: {
+                      prefix: "$",
+                    },
+                  },
+                  rangeSelector: {
+                    inputFields: {
+                      startValue: chartData.closes.length
+                        ? chartData.closes[0].x
+                        : new Date(),
+                      endValue: new Date(),
+                    },
+                    buttons: [
+                      { label: "1h", range: 1, rangeType: "hour" },
+                      { label: "4h", range: 4, rangeType: "hour" },
+                      { label: "24h", range: 24, rangeType: "hour" },
+                      { label: "All", rangeType: "all" },
+                    ],
+                  },
+                }}
+              />
+            )}
           </div>
         </div>
       </div>
