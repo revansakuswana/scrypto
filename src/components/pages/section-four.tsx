@@ -209,14 +209,6 @@ export default function SectionFour() {
       const chart = new (window as any).CanvasJS.StockChart("chartContainer", {
         theme: "dark",
         backgroundColor: "transparent",
-        title: {
-          text: "View Chart",
-          padding: 10,
-          fontColor: "#FFFFFF",
-        },
-        subtitles: [
-          { text: "Scrypto Price (USD)", padding: 5, fontColor: "#FFFFFF" },
-        ],
         charts: [
           {
             axisX: {
@@ -350,7 +342,25 @@ export default function SectionFour() {
         </div>
 
         {/* Area Grafik (menggunakan posisi relatif & absolut) */}
-        <div className="relative flex flex-col gap-10 justify-center items-center">
+        <div className="relative flex flex-col gap-6 justify-center items-center">
+          <div className="text-center">
+            <motion.h2
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
+              View Chart
+            </motion.h2>
+          </div>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-lg text-gray-300">
+            Scrypto Price (USD)
+          </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
