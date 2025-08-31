@@ -50,7 +50,7 @@ export default function SectionFive() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
-          SCRYPTO Available on Several DEXs
+          Title DEXs
         </motion.h2>
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
         <motion.p
@@ -59,7 +59,7 @@ export default function SectionFive() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-6 text-lg text-gray-300 flex items-center justify-center gap-2">
-          2000 cyber husky minted, hold em to get airdrop and other utilities
+          Desk SCRYPTO Available on Several DEXs
         </motion.p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-10">
           <a
@@ -70,7 +70,7 @@ export default function SectionFive() {
             <img
               src="/WhatsApp Image 2025-08-31 at 22.43.12 (1).jpeg"
               alt="Ociswap"
-              className="w-40 h-40 object-contain rounded-2xl"
+              className="w-40 h-40 object-contain rounded-full"
             />
             <span className="text-sm">ociswap.com</span>
           </a>
@@ -82,7 +82,7 @@ export default function SectionFive() {
             <img
               src="/WhatsApp Image 2025-08-31 at 22.43.12.jpeg"
               alt="Astrl Trade"
-              className="w-40 h-40 object-contain rounded-2xl"
+              className="w-40 h-40 object-contain rounded-full"
             />
             <span className="text-sm">astrl.trade</span>
           </a>
@@ -94,7 +94,7 @@ export default function SectionFive() {
             <img
               src="/WhatsApp Image 2025-08-31 at 22.43.13 (1).jpeg"
               alt="Defiplaza"
-              className="w-40 h-40 object-contain rounded-2xl"
+              className="w-40 h-40 object-contain rounded-full"
             />
             <span className="text-sm">defiplaza.net</span>
           </a>
@@ -106,7 +106,7 @@ export default function SectionFive() {
             <img
               src="/WhatsApp Image 2025-08-31 at 22.43.13.jpeg"
               alt="Caviarnine"
-              className="w-40 h-40 object-contain rounded-2xl"
+              className="w-40 h-40 object-contain rounded-full"
             />
             <span className="text-sm">caviarnine.com</span>
           </a>
