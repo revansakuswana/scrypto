@@ -61,8 +61,8 @@ export default function SectionSix() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-6 text-lg text-gray-300 flex items-center justify-center gap-2">
-          2000 cyber huskies, hold them to get $SCRYPTO airdrops and join the
-          cyber pack
+          2000 cyber huskies, hold them to receive $SCRYPTO airdrops and join
+          the cyber pack
         </motion.p>
       </div>
 
