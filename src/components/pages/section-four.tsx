@@ -6,10 +6,6 @@ import {
   IconClock,
   IconExternalLink,
 } from "@tabler/icons-react";
-import CanvasJSReact from "@canvasjs/react-stockcharts";
-
-var CanvasJS = CanvasJSReact.CanvasJS;
-var CanvasJSStockChart = CanvasJSReact.CanvasJSStockChart;
 
 export default function SectionFour() {
   const [stats, setStats] = useState([
@@ -207,6 +203,67 @@ export default function SectionFour() {
     fetchEvents();
   }, [selectedRange]);
 
+  useEffect(() => {
+    if (chartData.isLoaded) {
+      const chart = new (window as any).CanvasJS.StockChart("chartContainer", {
+        theme: "dark2",
+        title: { text: "Scrypto Price Chart", padding: 10 },
+        subtitles: [{ text: "Scrypto Price (USD)", padding: 5 }],
+        charts: [
+          {
+            axisX: { crosshair: { enabled: true, snapToDataPoint: true } },
+            axisY: { prefix: "$" },
+            data: [
+              {
+                type: "candlestick",
+                xValueType: "dateTime",
+                yValueFormatString: "$0.########",
+                dataPoints: chartData.candles,
+              },
+            ],
+          },
+        ],
+        navigator: {
+          data: [{ dataPoints: chartData.closes }],
+          slider: {
+            minimum: chartData.closes.length
+              ? chartData.closes[0].x
+              : new Date(),
+            maximum: chartData.closes.length
+              ? chartData.closes[chartData.closes.length - 1].x
+              : new Date(),
+          },
+          axisX: {
+            labelFormatter: function (e: any) {
+              return (window as any).CanvasJS.formatDate(e.value, "DD MMM YY");
+            },
+          },
+          axisY: { prefix: "$" },
+        },
+        rangeSelector: {
+          inputFields: {
+            startValue: chartData.closes.length
+              ? chartData.closes[0].x
+              : new Date(),
+            endValue: new Date(),
+          },
+          buttons: [
+            { label: "1m", range: 1, rangeType: "month" },
+            { label: "3m", range: 3, rangeType: "month" },
+            { label: "6m", range: 6, rangeType: "month" },
+            { label: "YTD", rangeType: "ytd" },
+            { label: "1y", range: 1, rangeType: "year" },
+            { label: "All", rangeType: "all" },
+          ],
+          buttonClick: (e: any) => {
+            setSelectedRange(e.label);
+          },
+        },
+      });
+      chart.render();
+    }
+  }, [chartData]);
+
   return (
     <section
       id="chart"
@@ -283,84 +340,9 @@ export default function SectionFour() {
           </button>
           <div className="w-full max-w-6xl h-[500px] mx-auto flex items-center justify-center">
             {chartData.isLoaded ? (
-              <CanvasJSStockChart
-                containerProps={{
-                  width: "100%",
-                  height: "500px",
-                  margin: "auto",
-                }}
-                options={{
-                  theme: "dark2",
-                  title: {
-                    text: "Scrypto Price Chart",
-                    padding: 10,
-                  },
-                  subtitles: [
-                    {
-                      text: "Scrypto Price (USD)",
-                      padding: 5,
-                    },
-                  ],
-                  charts: [
-                    {
-                      axisX: {
-                        crosshair: {
-                          enabled: true,
-                          snapToDataPoint: true,
-                        },
-                      },
-                      axisY: {
-                        prefix: "$",
-                      },
-                      data: [
-                        {
-                          type: "candlestick",
-                          xValueType: "dateTime",
-                          yValueFormatString: "$0.########",
-                          dataPoints: chartData.candles,
-                        },
-                      ],
-                    },
-                  ],
-                  navigator: {
-                    data: [{ dataPoints: chartData.closes }],
-                    slider: {
-                      minimum: chartData.closes.length
-                        ? chartData.closes[0].x
-                        : new Date(),
-                      maximum: chartData.closes.length
-                        ? chartData.closes[chartData.closes.length - 1].x
-                        : new Date(),
-                    },
-                    axisX: {
-                      labelFormatter: function (e: any) {
-                        return CanvasJS.formatDate(e.value, "DD MMM YY");
-                      },
-                    },
-                    axisY: {
-                      prefix: "$",
-                    },
-                  },
-                  rangeSelector: {
-                    inputFields: {
-                      startValue: chartData.closes.length
-                        ? chartData.closes[0].x
-                        : new Date(),
-                      endValue: new Date(),
-                    },
-                    buttons: [
-                      { label: "1m", range: 1, rangeType: "month" },
-                      { label: "3m", range: 3, rangeType: "month" },
-                      { label: "6m", range: 6, rangeType: "month" },
-                      { label: "YTD", rangeType: "ytd" },
-                      { label: "1y", range: 1, rangeType: "year" },
-                      { label: "All", rangeType: "all" },
-                    ],
-                    buttonClick: (e: any) => {
-                      setSelectedRange(e.label);
-                    },
-                  },
-                }}
+              <div
+                id="chartContainer"
+                style={{ width: "100%", height: "500px" }}
               />
             ) : (
               <div className="flex flex-col items-center gap-3">
