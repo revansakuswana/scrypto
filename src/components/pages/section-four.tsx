@@ -210,7 +210,7 @@ export default function SectionFour() {
         theme: "dark",
         backgroundColor: "transparent",
         title: {
-          text: "Scrypto Price Chart",
+          text: "View Chart",
           padding: 10,
           fontColor: "#FFFFFF",
         },
@@ -351,20 +351,6 @@ export default function SectionFour() {
 
         {/* Area Grafik (menggunakan posisi relatif & absolut) */}
         <div className="relative flex flex-col gap-10 justify-center items-center">
-          {/* Tombol "View Chart" */}
-          <button
-            className="
-          flex items-center gap-2 
-          font-semibold 
-          border
-          rounded-lg
-          px-4 py-2
-          text-purple-400
-          hover:text-white transition-colors
-        ">
-            <IconExternalLink size={20} />
-            <span>VIEW CHART</span>
-          </button>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
