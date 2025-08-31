@@ -46,7 +46,7 @@ export default function SectionFour() {
     isLoaded: false,
   });
 
-  const [selectedRange, setSelectedRange] = useState("24h");
+  const [selectedRange, setSelectedRange] = useState("All");
 
   useEffect(() => {
     async function fetchTokenData() {
@@ -105,28 +105,43 @@ export default function SectionFour() {
       try {
         let cursor = 0;
         let allEvents: any[] = [];
-
+        const now = Date.now();
+        let cutoff: number;
+        let bucketMs: number;
+        if (selectedRange === "1h") {
+          cutoff = now - 1 * 60 * 60 * 1000;
+          bucketMs = 5 * 60 * 1000; // 5 minutes / candle
+        } else if (selectedRange === "4h") {
+          cutoff = now - 4 * 60 * 60 * 1000;
+          bucketMs = 15 * 60 * 1000; // 15 minutes / candle
+        } else if (selectedRange === "24h") {
+          cutoff = now - 24 * 60 * 60 * 1000;
+          bucketMs = 60 * 60 * 1000; // 1 hour / candle
+        } else {
+          cutoff = now - 30 * 24 * 60 * 60 * 1000; // last 30 days
+          bucketMs = 24 * 60 * 60 * 1000; // 1 day / candle
+        }
         while (true) {
           const res = await fetch(
             `https://api.ociswap.com/tokens/resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c/events?cursor=${cursor}&limit=100`
           );
           const json = await res.json();
-          allEvents = [...allEvents, ...(json.data || [])];
+          const page = json.data || [];
+          if (page.length === 0) break;
+          allEvents = [...allEvents, ...page];
+          // Early stop if this page already includes items older than cutoff
+          const pageMinTs = Math.min(
+            ...page.map((ev: any) => new Date(ev.timestamp).getTime())
+          );
+          if (isFinite(pageMinTs) && pageMinTs < cutoff) break;
           if (!json.next_cursor || json.next_cursor === cursor) break;
           cursor = json.next_cursor;
         }
-        const events = allEvents.filter((ev: any) => ev.type === "swap");
+        const events = allEvents.filter(
+          (ev: any) =>
+            ev.type === "swap" && new Date(ev.timestamp).getTime() >= cutoff
+        );
 
-        let bucketMs: number;
-        if (selectedRange === "1h") {
-          bucketMs = 5 * 60 * 1000; // 5 minutes per candle
-        } else if (selectedRange === "4h") {
-          bucketMs = 15 * 60 * 1000; // 15 minutes per candle
-        } else if (selectedRange === "24h") {
-          bucketMs = 60 * 60 * 1000; // 1 hour per candle
-        } else {
-          bucketMs = 24 * 60 * 60 * 1000; // 1 day per candle for All
-        }
         const ohlc: Record<
           number,
           { o: number; h: number; l: number; c: number; v: number }
@@ -168,17 +183,20 @@ export default function SectionFour() {
           }
         }
 
-        const candles = Object.entries(ohlc).map(([t, v]) => ({
-          x: new Date(Number(t)),
-          y: [v.o, v.h, v.l, v.c],
+        const sortedTs = Object.keys(ohlc)
+          .map(Number)
+          .sort((a, b) => a - b);
+        const candles = sortedTs.map((t) => ({
+          x: new Date(t),
+          y: [ohlc[t].o, ohlc[t].h, ohlc[t].l, ohlc[t].c],
         }));
-        const volumes = Object.entries(ohlc).map(([t, v]) => ({
-          x: new Date(Number(t)),
-          y: v.v,
+        const volumes = sortedTs.map((t) => ({
+          x: new Date(t),
+          y: ohlc[t].v,
         }));
-        const closes = Object.entries(ohlc).map(([t, v]) => ({
-          x: new Date(Number(t)),
-          y: v.c,
+        const closes = sortedTs.map((t) => ({
+          x: new Date(t),
+          y: ohlc[t].c,
         }));
 
         setChartData({ candles, volumes, closes, isLoaded: true });
@@ -263,8 +281,8 @@ export default function SectionFour() {
             <IconExternalLink size={20} />
             <span>VIEW CHART</span>
           </button>
-          <div className="w-full max-w-6xl h-[500px] mx-auto">
-            {chartData.isLoaded && (
+          <div className="w-full max-w-6xl h-[500px] mx-auto flex items-center justify-center">
+            {chartData.isLoaded ? (
               <CanvasJSStockChart
                 containerProps={{
                   width: "100%",
@@ -274,7 +292,7 @@ export default function SectionFour() {
                 options={{
                   theme: "dark2",
                   title: {
-                    text: "StockChart with Date-Time Axis",
+                    text: "Scrypto Price Chart",
                     padding: 10,
                   },
                   subtitles: [
@@ -298,7 +316,7 @@ export default function SectionFour() {
                         {
                           type: "candlestick",
                           xValueType: "dateTime",
-                          yValueFormatString: "$#,###.########",
+                          yValueFormatString: "$0.########",
                           dataPoints: chartData.candles,
                         },
                       ],
@@ -310,7 +328,9 @@ export default function SectionFour() {
                       minimum: chartData.closes.length
                         ? chartData.closes[0].x
                         : new Date(),
-                      maximum: new Date(),
+                      maximum: chartData.closes.length
+                        ? chartData.closes[chartData.closes.length - 1].x
+                        : new Date(),
                     },
                     axisX: {
                       labelFormatter: function (e: any) {
@@ -322,7 +342,6 @@ export default function SectionFour() {
                     },
                   },
                   rangeSelector: {
-                    selectedRange: selectedRange,
                     inputFields: {
                       startValue: chartData.closes.length
                         ? chartData.closes[0].x
@@ -330,17 +349,24 @@ export default function SectionFour() {
                       endValue: new Date(),
                     },
                     buttons: [
-                      { label: "1h", range: 1, rangeType: "hour" },
-                      { label: "4h", range: 4, rangeType: "hour" },
-                      { label: "24h", range: 24, rangeType: "hour" },
+                      { label: "1m", range: 1, rangeType: "month" },
+                      { label: "3m", range: 3, rangeType: "month" },
+                      { label: "6m", range: 6, rangeType: "month" },
+                      { label: "YTD", rangeType: "ytd" },
+                      { label: "1y", range: 1, rangeType: "year" },
                       { label: "All", rangeType: "all" },
                     ],
                     buttonClick: (e: any) => {
-                      setSelectedRange(e.rangeType === "all" ? "all" : e.label);
+                      setSelectedRange(e.label);
                     },
                   },
                 }}
               />
+            ) : (
+              <div className="flex flex-col items-center gap-3">
+                <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-pink-500 border-solid"></div>
+                <p className="text-gray-400">Loading chart data...</p>
+              </div>
             )}
           </div>
         </div>
