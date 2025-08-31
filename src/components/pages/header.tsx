@@ -53,7 +53,7 @@ export default function Header({
           </div>
         </a>
         {/* Bagian Tengah: Navigasi */}
-        <nav className="hidden md:flex flex-1 justify-center items-center gap-6 flex-wrap">
+        <nav className="hidden md:flex flex-1 justify-center items-center sm:gap-6 flex-wrap">
           {navLinks.map((link) => (
             <a
               key={link.label}
