@@ -7,6 +7,7 @@ import SectionFive from "@/components/pages/section-five";
 import SectionSix from "@/components/pages/section-six";
 import SectionSeven from "@/components/pages/section-seven";
 import SectionEight from "@/components/pages/section-eight";
+import SectionNine from "@/components/pages/section-nine";
 import "./App.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         sectionTwo={<SectionTwo />}
         sectionThree={<SectionThree />}
         sectionFour={<SectionFour />}
+        sectionNine={<SectionNine />}
         sectionFive={<SectionFive />}
         sectionSix={<SectionSix />}
         sectionSeven={<SectionSeven />}
