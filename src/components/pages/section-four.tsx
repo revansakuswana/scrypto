@@ -5,7 +5,6 @@ import {
   IconTrendingUp,
   IconChartBar,
   IconClock,
-  IconExternalLink,
 } from "@tabler/icons-react";
 
 export default function SectionFour() {
@@ -36,7 +35,16 @@ export default function SectionFour() {
     },
   ]);
 
-  const [chartData, setChartData] = useState({
+  type CandlePoint = { x: Date; y: number[] };
+  type VolumePoint = { x: Date; y: number };
+  type ClosePoint = { x: Date; y: number };
+
+  const [chartData, setChartData] = useState<{
+    candles: CandlePoint[];
+    volumes: VolumePoint[];
+    closes: ClosePoint[];
+    isLoaded: boolean;
+  }>({
     candles: [],
     volumes: [],
     closes: [],
