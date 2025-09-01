@@ -135,7 +135,7 @@ export default function SectionSeven() {
               <div className="flex-grow h-64 bg-black/20">
                 <img
                   src={meme.image}
-                  alt={meme.title}
+                  alt={`Meme #${meme.number}`}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -187,5 +187,3 @@ export default function SectionSeven() {
     </motion.section>
   );
 }
-
-
