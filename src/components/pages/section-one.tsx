@@ -1,7 +1,7 @@
 import {
   IconTrendingUp,
   IconMessageCircle,
-  IconExternalLink,
+  IconCopy,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 
@@ -44,37 +44,18 @@ export default function SectionOne() {
         mb-6
       ">
         <img src="/logo-heading.png" alt="Logo" className="w-4 h-4 mx-auto" />
-        $SCRYPTO on Radix
+        SCRYPTO on Radix
       </div>
 
-      {/* Judul utama */}
-      <motion.h1
+      {/* Gambar utama berbentuk lingkaran di tengah */}
+      <motion.img
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="
-        text-5xl md:text-7xl
-        font-bold
-        uppercase
-        tracking-widest
-        text-pink-500
-        mb-6
-      ">
-        Bark to the
-        <br />
-        Moon
-      </motion.h1>
-
-      {/* Subjudul */}
-      <p
-        className="
-        text-2xl md:text-3xl  // Ukuran teks
-        font-semibold          // Teks tebal
-        text-blue-400          // Warna teks biru
-        mb-6                   // Margin bawah
-      ">
-        Unleash the $SCRYPTO pack power.
-      </p>
+        src="/logo-home.jpeg"
+        alt="Main Logo"
+        className="w-80 h-80 rounded-full mx-auto mb-6"
+      />
 
       {/* Teks deskripsi kecil */}
       <p
@@ -83,7 +64,7 @@ export default function SectionOne() {
         text-gray-400   // Warna teks abu-abu
         mb-6            // Margin bawah besar sebelum tombol
       ">
-        Cyber Husky vibes on Radix DLT.
+        Scrypto: The Cyber Husky Meme Coin unleashed on Radix!
       </p>
 
       {/* Grup Tombol */}
@@ -111,7 +92,7 @@ export default function SectionOne() {
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
           }}
-          href="#buy-now">
+          href="https://ociswap.com/resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c">
           <button
             className="
           flex items-center gap-2 
@@ -123,6 +104,29 @@ export default function SectionOne() {
         ">
             <IconTrendingUp size={20} />
             <span>BUY NOW</span>
+          </button>
+        </motion.a>
+
+        {/* Tombol "X Account" */}
+        <motion.a
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          href="https://x.com/Scrypto_Radix"
+          target="_blank"
+          rel="noopener noreferrer">
+          <button
+            className="
+            flex items-center gap-2 
+            px-6 py-5 
+            rounded-lg 
+            font-bold 
+            bg-gradient-to-r from-blue-500 to-purple-600 
+            hover:opacity-90 transition-opacity
+          ">
+            <span>𝕏</span>
+            <span>FOLLOW US</span>
           </button>
         </motion.a>
 
@@ -149,24 +153,27 @@ export default function SectionOne() {
           </button>
         </motion.a>
 
-        {/* Tombol "View Chart" */}
-        <motion.a
+        {/* Tombol "Copy Contract" */}
+        <motion.button
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
           }}
-          href="#buy-now">
-          <button
-            className="
+          onClick={() => {
+            navigator.clipboard.writeText(
+              "resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c"
+            );
+            alert("Contract address copied!");
+          }}
+          className="
           flex items-center gap-2 
           font-semibold 
           text-purple-400
           hover:text-white transition-colors
         ">
-            <IconExternalLink size={20} />
-            <span>VIEW CHART</span>
-          </button>
-        </motion.a>
+          <IconCopy size={20} />
+          <span>COPY CONTRACT</span>
+        </motion.button>
       </motion.div>
     </motion.section>
   );

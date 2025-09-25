@@ -47,8 +47,7 @@ export default function SectionThree() {
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl md:text-5xl font-bold text-pink-500  tracking-wider mb-4"
-        >
+          className="text-4xl md:text-5xl font-bold text-pink-500  tracking-wider mb-4">
           Grab Your $SCRYPTO
         </motion.h2>
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full "></div>
@@ -57,8 +56,7 @@ export default function SectionThree() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-lg text-gray-300 mt-4"
-        >
+          className="text-lg text-gray-300 mt-4">
           Join the cyber pack, unleash the moon vibes.
         </motion.p>
       </div>
@@ -71,8 +69,7 @@ export default function SectionThree() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="w-full flex justify-center"
-        >
+          className="w-full flex justify-center">
           <iframe
             src="https://astrolescent.com/widget?to=resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c&amount=100"
             className="w-full max-w-md h-[535px] rounded-xl"
@@ -85,8 +82,7 @@ export default function SectionThree() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="flex justify-center items-center"
-        >
+          className="flex justify-center items-center">
           <img src={WolfImage} alt="Cyber Wolf" className="w-full max-w-sm" />
         </motion.div>
       </div>

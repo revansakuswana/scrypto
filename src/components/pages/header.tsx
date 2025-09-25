@@ -1,4 +1,4 @@
-import { IconMenu2, IconTrendingUp } from "@tabler/icons-react";
+import { IconMenu2 } from "@tabler/icons-react";
 import { useState } from "react";
 
 interface HeaderProps {
@@ -7,16 +7,18 @@ interface HeaderProps {
 }
 
 export default function Header({
-  brandName = "$SCRYPTO",
-  onBuyButtonClick,
+  brandName = "SCRYPTO on Radix",
 }: HeaderProps) {
   const navLinks = [
     { to: "#home", label: "Home" },
     { to: "#about", label: "About" },
-    { to: "#chart", label: "Chart" },
-    { to: "#buy-now", label: "Buy" },
-    { to: "#gallery", label: "Gallery" },
+    { to: "#tokenomics", label: "Tokenomics" },
     { to: "#vision", label: "Vision" },
+    { to: "#chart", label: "Chart" },
+    { to: "#dexs", label: "DEXs" },
+    { to: "#staking", label: "Staking" },
+    { to: "#nft", label: "NFT" },
+    { to: "#gallery", label: "Gallery" },
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,7 +55,7 @@ export default function Header({
           </div>
         </a>
         {/* Bagian Tengah: Navigasi */}
-        <nav className="hidden md:flex flex-1 justify-center items-center sm:gap-6 flex-wrap">
+        <nav className="hidden md:flex flex-1 justify-end items-center sm:gap-6 flex-wrap">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -73,25 +75,6 @@ export default function Header({
 
         {/* Bagian Kanan: Tombol "Buy now" dan Hamburger */}
         <div className="flex items-center flex-shrink-0">
-          <a href="#buy-now">
-            <button
-              onClick={onBuyButtonClick}
-              className="
-              hidden md:flex items-center gap-2
-              text-black
-              px-4 py-3 
-              font-normal
-              rounded-lg
-              bg-gradient-to-r from-purple-600 to-blue-700
-              hover:opacity-90
-              transition-opacity
-              duration-300
-            ">
-              <IconTrendingUp size={20} />
-              <span>BUY NOW</span>
-            </button>
-          </a>
-
           {/* Hamburger Menu untuk Mobile */}
           <div className="md:hidden ml-4">
             <button
@@ -118,7 +101,7 @@ export default function Header({
           flex
           flex-col
           items-center
-          justify-center
+          justify-between
           transition-opacity
           duration-300
           ${
@@ -149,30 +132,6 @@ export default function Header({
               {link.label}
             </a>
           ))}
-          <a href="#buy-now">
-            <button
-              onClick={() => {
-                setIsMenuOpen(false);
-                if (onBuyButtonClick) {
-                  onBuyButtonClick();
-                }
-              }}
-              className="
-              text-black
-              flex items-center gap-2
-              px-4 py-3  
-              font-bold
-              rounded-lg
-              bg-gradient-to-r from-purple-600 to-blue-700
-              hover:opacity-90
-              transition-opacity
-              duration-300
-              text-lg
-            ">
-              <IconTrendingUp size={20} />
-              <span>BUY NOW</span>
-            </button>
-          </a>
         </nav>
       </div>
     </>
