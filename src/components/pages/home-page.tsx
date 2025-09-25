@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "@/components/pages/header";
 import Footer from "@/components/pages/footer";
+import { Toaster } from "@/components/ui/sonner";
 
 // Definisikan tipe untuk props yang diterima oleh template
 interface HomePageTemplateProps {
@@ -41,6 +42,7 @@ const HomePageTemplate: React.FC<HomePageTemplateProps> = ({
         {sectionEight}
       </main>
       <Footer />
+      <Toaster richColors />
     </div>
   );
 };

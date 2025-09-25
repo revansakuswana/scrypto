@@ -4,6 +4,7 @@ import {
   IconCopy,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
+import { toast } from "sonner";
 
 export default function SectionOne() {
   return (
@@ -163,7 +164,7 @@ export default function SectionOne() {
             navigator.clipboard.writeText(
               "resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c"
             );
-            alert("Contract address copied!");
+            toast.success("Contract address has been copied to clipboard!");
           }}
           className="
           flex items-center gap-2 
