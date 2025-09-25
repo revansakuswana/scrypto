@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 export default function SectionFive() {
   return (
     <motion.section
+      id="dexs"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -59,7 +60,7 @@ export default function SectionFive() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-6 text-lg text-gray-300 flex items-center justify-center gap-2">
-          $SCRYPTO available on:
+          SCRYPTO available on:
         </motion.p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-10">
           <a
