@@ -177,7 +177,7 @@ export default function SectionSeven() {
           <IconPhoto size={48} className="text-pink-400" />
           <h3 className="text-2xl font-bold text-pink-400">Drop Your Fire!</h3>
           <p className="text-gray-400">
-            Epic $SCRYPTO memes? The pack wants them!
+            Epic SCRYPTO memes? The pack wants them!
           </p>
           <a href="#" className="text-cyan-400 font-semibold hover:underline">
             Telegram = meme heaven

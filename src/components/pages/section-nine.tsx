@@ -59,7 +59,7 @@ export default function SectionNine() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-6 text-lg text-gray-300 flex items-center justify-center gap-2">
-          Stake $SCRYPTO to earn your share of 250,000 $SCRYPTO, distributed
+          Stake SCRYPTO to earn your share of 250,000 SCRYPTO, distributed
           weekly to stakers
         </motion.p>
         <div className="mt-10">

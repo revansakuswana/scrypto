@@ -95,7 +95,7 @@ export default function Footer() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex flex-col sm:flex-row justify-between items-center text-sm">
-          <p>&copy; {new Date().getFullYear()} $SCRYPTO</p>
+          <p>&copy; {new Date().getFullYear()} SCRYPTO</p>
           <p className="mt-2 sm:mt-0">
             Powered by{" "}
             <a
