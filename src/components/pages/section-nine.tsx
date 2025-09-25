@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 export default function SectionNine() {
   return (
     <motion.section
+      id="staking"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -20,7 +21,7 @@ export default function SectionNine() {
       sm:px-35
       sm:py-30
     ">
-      {/* <motion.div
+      <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -40,9 +41,9 @@ export default function SectionNine() {
         tracking-wider
         mb-6
       ">
-        <img src="/logo-heading.png" alt="Logo" className="w-4 h-4 mx-auto" />
-        SCRYPTO NFTS
-      </motion.div> */}
+        <img src="/logo-heading.svg" alt="Logo" className="w-4 h-4 mx-auto" />
+        Staking
+      </motion.div>
       <div className="text-center mb-6">
         <motion.h2
           initial={{ scale: 0.9, opacity: 0 }}
@@ -59,8 +60,8 @@ export default function SectionNine() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-6 text-lg text-gray-300 flex items-center justify-center gap-2">
-          Stake SCRYPTO to earn your share of 250,000 SCRYPTO, distributed
-          weekly to stakers
+          Stake SCRYPTO to earn your share of 250,000 SCRYPTO rewards,
+          distributed weekly to stakers.
         </motion.p>
         <div className="mt-10">
           <iframe

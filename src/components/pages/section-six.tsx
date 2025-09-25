@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function SectionSix() {
   return (
     <motion.section
-      id="buy-now"
+      id="nft"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -42,8 +42,8 @@ export default function SectionSix() {
         tracking-wider
         mb-6
       ">
-        <img src="/logo-heading.png" alt="Logo" className="w-4 h-4 mx-auto" />
-        SCRYPTO NFTS
+        <img src="/logo-heading.svg" alt="Logo" className="w-4 h-4 mx-auto" />
+        NFTS
       </motion.div>
       <div className="text-center mb-6">
         <motion.h2
@@ -52,7 +52,7 @@ export default function SectionSix() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
-          SCRYPTO NFTS
+          SCRYPTO NFTS and Game
         </motion.h2>
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
         <motion.p
@@ -61,10 +61,41 @@ export default function SectionSix() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-6 text-lg text-gray-300 flex items-center justify-center gap-2">
-          2000 cyber huskies, hold them to receive SCRYPTO airdrops and join the
-          cyber pack
+          Total and max mint: 2,000 Cyber Huskies. Hold them to earn SCRYPTO
+          rewards and join the Cyber Pack ecosystem, with SCRYPTO serving as the
+          utility token. An NFT battle web app game is in development, featuring
+          Play-to-Earn and Player-vs-Player gameplay, also utilizing SCRYPTO as
+          the in-game utility token.
         </motion.p>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-10">
+        <img
+          src="/WhatsApp Image 2025-09-26 at 01.02.52.svg"
+          alt="NFT 1"
+          className="w-full object-cover rounded-lg"
+        />
+        <img
+          src="/WhatsApp Image 2025-09-26 at 01.02.53 (1).svg"
+          alt="NFT 2"
+          className="w-full object-cover rounded-lg"
+        />
+        <img
+          src="/WhatsApp Image 2025-09-26 at 01.02.53.svg"
+          alt="NFT 3"
+          className="w-full object-cover rounded-lg"
+        />
+        <img
+          src="/WhatsApp Image 2025-09-26 at 01.02.54.svg"
+          alt="NFT 4"
+          className="w-full object-cover rounded-lg"
+        />
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -74,7 +105,7 @@ export default function SectionSix() {
         className="flex flex-col gap-8">
         {/* Tombol "Buy Now" */}
         <a
-          href="https://singularityx.net/nfts"
+          href="https://singularityx.net/nfts#scrypto"
           target="_blank"
           rel="noopener noreferrer">
           <button className="flex items-center gap-2 px-6 py-5 rounded-lg font-bold text-black bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 transition-opacity">

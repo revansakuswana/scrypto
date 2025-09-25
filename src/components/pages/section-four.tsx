@@ -314,7 +314,7 @@ export default function SectionFour() {
         tracking-wider
         mb-6
       ">
-        <img src="/logo-heading.png" alt="Logo" className="w-4 h-4 mx-auto" />
+        <img src="/logo-heading.svg" alt="Logo" className="w-4 h-4 mx-auto" />
         Track The Pack
       </div>
       <div className="container mx-auto">

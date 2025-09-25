@@ -1,7 +1,7 @@
 import { IconEye, IconUsers, IconBolt } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 
-import WolfImage from "../../../public/logo-header.png";
+import WolfImage from "../../../public/logo-header.svg";
 
 export default function SectionEight() {
   return (
@@ -80,14 +80,9 @@ export default function SectionEight() {
             <div>
               <h3 className="text-2xl font-bold mb-2">Vision</h3>
               <p className="text-gray-300 leading-relaxed">
-                Leading the{" "}
-                <span className="font-bold text-pink-400">meme revolution</span>{" "}
-                with
-                <span className="font-bold text-cyan-400">
-                  {" "}
-                  cyber loyalty
-                </span>{" "}
-                on Radix.
+                Scrypto is more than just a meme coin — it was created to
+                celebrate and bring awareness to Radix and its open-source smart
+                contract language, Scrypto.
               </p>
             </div>
           </motion.div>
@@ -108,53 +103,33 @@ export default function SectionEight() {
             <div>
               <h3 className="text-2xl font-bold mb-2">Mission</h3>
               <p className="text-gray-300 leading-relaxed">
-                Building the{" "}
-                <span className="font-bold text-cyan-400">strongest pack</span>{" "}
-                with
-                <span className="font-bold text-pink-400">
-                  {" "}
-                  zero rug energy
-                </span>
-                . Pure{" "}
-                <span className="font-bold text-purple-400">
-                  moon vibes
-                </span>{" "}
-                and loyal community power.
+                Longevity & Trust — Inspired by real technology and backed by
+                locked liquidity, Scrypto is created for the Radix community to
+                enjoy safely and securely.
               </p>
             </div>
           </motion.div>
 
-          {/* Grid untuk Kartu Kecil di Bawah */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {/* Kartu Anti-Rug */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0 }}
-              className="
+          {/* Kartu Community Driven */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0 }}
+            className="
                 bg-gray-900/40 p-6 rounded-lg border border-pink-400
-                flex flex-col items-center text-center gap-3
+                flex gap-6 items-start
               ">
+            <div className="bg-pink-400/20 p-3 rounded-full">
               <IconUsers size={32} className="text-pink-400" />
+            </div>
+            <div>
               <h4 className="text-xl font-bold">Community Driven</h4>
-              <p className="text-gray-400">From community, to the community</p>
-            </motion.div>
-            {/* Kartu Innovation */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="
-                bg-gray-900/40 p-6 rounded-lg border border-purple-400
-                flex flex-col items-center text-center gap-3
-              ">
-              <IconBolt size={32} className="text-purple-400" />
-              <h4 className="text-xl font-bold">Innovation</h4>
-              <p className="text-gray-400">Radix Technology</p>
-            </motion.div>
-          </div>
+              <p className="text-gray-400">
+                Built by meme lovers, for meme lovers.
+              </p>
+            </div>
+          </motion.div>
         </div>
 
         {/* Kolom Kanan: Gambar dengan Tag */}

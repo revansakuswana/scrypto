@@ -4,7 +4,7 @@ import {
   IconArrowsExchange,
 } from "@tabler/icons-react";
 
-import WolfLogo from "../../../public/logo-header.png";
+import WolfLogo from "../../../public/logo-header.svg";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -50,8 +50,7 @@ export default function Footer() {
               </h3>
             </motion.div>
             <p className="text-sm max-w-xs">
-              Cyber Husky vibes unleashed on Radix. Pack loyalty meets moon
-              missions.
+              Cyber Pack Energy. Cyber Husky meme vibes unleashed on Radix.
             </p>
           </div>
 

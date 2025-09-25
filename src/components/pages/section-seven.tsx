@@ -46,12 +46,6 @@ export default function SectionSeven() {
       comments: 77,
       image: "/WhatsApp Image 2025-08-31 at 22.34.15 (1).jpeg",
     },
-    {
-      number: 7,
-      likes: 555,
-      comments: 77,
-      image: "/WhatsApp Image 2025-08-31 at 22.34.15.jpeg",
-    },
   ];
 
   return (
@@ -94,7 +88,7 @@ export default function SectionSeven() {
         tracking-wider
         mb-6
       ">
-        <img src="/logo-heading.png" alt="Logo" className="w-4 h-4 mx-auto" />
+        <img src="/logo-heading.svg" alt="Logo" className="w-4 h-4 mx-auto" />
         Pack Memes
       </motion.div>
       <div className="text-center mb-6">

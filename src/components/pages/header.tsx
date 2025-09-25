@@ -45,7 +45,7 @@ export default function Header({
         <a href="#home">
           <div className="flex items-center flex-shrink-0">
             <img
-              src="/logo-header.png"
+              src="/logo-header.svg"
               alt="Logo navbar"
               className="w-8 h-8 mr-4"
             />

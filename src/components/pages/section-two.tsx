@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { IconBolt, IconUsers, IconShieldLock } from "@tabler/icons-react";
 import { useState } from "react";
-import WolfImage from "../../../public/logo-header.png";
+import WolfImage from "../../../public/logo-header.svg";
 
 export default function SectionTwo() {
   const [showMore, setShowMore] = useState(false);
@@ -64,7 +64,7 @@ export default function SectionTwo() {
         tracking-wider
         mb-6
       ">
-        <img src="/logo-heading.png" alt="Logo" className="w-4 h-4 mx-auto" />
+        <img src="/logo-heading.svg" alt="Logo" className="w-4 h-4 mx-auto" />
         SCRYPTO on Radix
       </div>
       <div className="text-center">

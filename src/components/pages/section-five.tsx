@@ -76,7 +76,7 @@ export default function SectionFive() {
             <span className="text-sm">astrl.trade</span>
           </a>
           <a
-            href="https://ociswap.com"
+            href="https://ociswap.com/resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
@@ -88,7 +88,7 @@ export default function SectionFive() {
             <span className="text-sm">ociswap.com</span>
           </a>
           <a
-            href="https://caviarnine.com"
+            href="hhttps://www.caviarnine.com/tokens/resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
@@ -100,7 +100,7 @@ export default function SectionFive() {
             <span className="text-sm">caviarnine.com</span>
           </a>
           <a
-            href="https://defiplaza.net"
+            href="https://radix.defiplaza.net/token/resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">

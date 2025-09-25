@@ -44,7 +44,7 @@ export default function SectionOne() {
         tracking-wider
         mb-6
       ">
-        <img src="/logo-heading.png" alt="Logo" className="w-4 h-4 mx-auto" />
+        <img src="/logo-heading.svg" alt="Logo" className="w-4 h-4 mx-auto" />
         SCRYPTO on Radix
       </div>
 
@@ -53,7 +53,7 @@ export default function SectionOne() {
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        src="/logo-home.jpeg"
+        src="/logo-home.svg"
         alt="Main Logo"
         className="w-80 h-80 rounded-full mx-auto mb-6"
       />
@@ -154,7 +154,7 @@ export default function SectionOne() {
           </button>
         </motion.a>
 
-        {/* Tombol "Copy Contract" */}
+        {/* Tombol "Resource Address" */}
         <motion.button
           variants={{
             hidden: { opacity: 0, y: 20 },
@@ -173,7 +173,7 @@ export default function SectionOne() {
           hover:text-white transition-colors
         ">
           <IconCopy size={20} />
-          <span>COPY CONTRACT</span>
+          <span>Resource Address</span>
         </motion.button>
       </motion.div>
     </motion.section>

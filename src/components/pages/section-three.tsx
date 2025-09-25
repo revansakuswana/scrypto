@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { toast } from "sonner";
 import { IconEye, IconCopy } from "@tabler/icons-react";
-import WolfImage from "../../../public/logo-wolf.png";
+import WolfImage from "../../../public/logo-wolf.svg";
 
 export default function SectionThree() {
   return (
     <motion.section
+      id="tokenomics"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -40,7 +41,7 @@ export default function SectionThree() {
         tracking-wider
         mb-6
       ">
-        <img src="/logo-heading.png" alt="Logo" className="w-4 h-4 mx-auto" />
+        <img src="/logo-heading.svg" alt="Logo" className="w-4 h-4 mx-auto" />
         GRAB IT NOW!
       </div>
       <div className="text-center mb-12">
@@ -65,29 +66,46 @@ export default function SectionThree() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="space-y-4 text-left text-gray-300">
-          <p>
-            <strong className="text-white">Token Max Supply:</strong> 1B
-          </p>
-          <p>
-            <strong className="text-white">Total Minted:</strong> 1B
-          </p>
-          <p>
-            <strong className="text-white">Tax:</strong> 0%
-          </p>
-          <p>
-            <strong className="text-white">Chain:</strong> Launched on{" "}
-            <span className="text-pink-400">Rly.Fun</span>, a fair launchpad on
-            Radix
-          </p>
-          <p>
-            <strong className="text-white">Safe Contract:</strong> Not mintable,
-            recallable, freezable
-          </p>
-          <p>
-            <strong className="text-white">Scrypto Utility:</strong> The Scrypto
-            token powers rewards, staking, liquidity pools, events, and a
-            growing ecosystem of dApps.
-          </p>
+          <table className="w-full text-gray-300 text-sm border-separate border-spacing-y-2">
+            <tbody>
+              <tr>
+                <td className="font-semibold text-white pr-4">
+                  Token Max Supply:
+                </td>
+                <td>1B</td>
+              </tr>
+              <tr>
+                <td className="font-semibold text-white pr-4">Total Minted:</td>
+                <td>1B</td>
+              </tr>
+              <tr>
+                <td className="font-semibold text-white pr-4">Tax:</td>
+                <td>0%</td>
+              </tr>
+              <tr>
+                <td className="font-semibold text-white pr-4">Chain:</td>
+                <td>
+                  Launched on <span className="text-pink-400">Rly.Fun</span>, a
+                  fair launchpad on Radix
+                </td>
+              </tr>
+              <tr>
+                <td className="font-semibold text-white pr-4">
+                  Safe Contract:
+                </td>
+                <td>Not mintable, recallable, freezable</td>
+              </tr>
+              <tr>
+                <td className="font-semibold text-white pr-4">
+                  Scrypto Utility:
+                </td>
+                <td>
+                  The Scrypto token powers rewards, staking, liquidity pools,
+                  events, and a growing ecosystem of dApps.
+                </td>
+              </tr>
+            </tbody>
+          </table>
           <div className="flex gap-2 mt-6">
             <motion.button
               variants={{
@@ -107,7 +125,7 @@ export default function SectionThree() {
           text-white
           font-semibold hover:opacity-90 transition-opacity">
               <IconCopy size={20} />
-              <span>COPY CONTRACT</span>
+              <span>Resource Address</span>
             </motion.button>
             <motion.a
               variants={{
