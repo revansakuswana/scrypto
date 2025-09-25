@@ -1,14 +1,11 @@
 import { motion } from "framer-motion";
-import {
-  IconBolt,
-  IconUsers,
-  IconShieldLock,
-  IconRocket,
-} from "@tabler/icons-react";
-
+import { IconBolt, IconUsers, IconShieldLock } from "@tabler/icons-react";
+import { useState } from "react";
 import WolfImage from "../../../public/logo-header.png";
 
 export default function SectionTwo() {
+  const [showMore, setShowMore] = useState(false);
+
   const features = [
     {
       icon: <IconBolt size={42} className="text-purple-400" />,
@@ -27,12 +24,6 @@ export default function SectionTwo() {
       title: "Anti-Rug",
       description: "Loyalty guaranteed",
       color: "text-pink-400",
-    },
-    {
-      icon: <IconRocket size={42} className="text-purple-400" />,
-      title: "To The Moon",
-      description: "Woof woof!",
-      color: "text-purple-400",
     },
   ];
 
@@ -74,7 +65,7 @@ export default function SectionTwo() {
         mb-6
       ">
         <img src="/logo-heading.png" alt="Logo" className="w-4 h-4 mx-auto" />
-        $SCRYPTO on Radix
+        SCRYPTO on Radix
       </div>
       <div className="text-center">
         <motion.h2
@@ -83,7 +74,7 @@ export default function SectionTwo() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
-          Cyber Pack Unleashed
+          About SCRYPTO
         </motion.h2>
         {/* Aksen garis bawah */}
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
@@ -93,11 +84,54 @@ export default function SectionTwo() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Kolom Kiri: Teks & Features */}
         <div className="flex flex-col gap-8 text-left">
-          <p className="text-lg text-gray-400 mt-4 leading-relaxed">
-            Inspired by the futuristic and loyal vibe of a cyber- enhanced
-            husky, Scrypto is a wild, community-driven meme coin that embodies
-            strength, adaptability, and innovation within the Radix ecosystem.
-          </p>
+          <div className="mt-4">
+            {!showMore ? (
+              <p className="text-lg text-gray-400 leading-relaxed line-clamp-3">
+                Scrypto was launched on Rly.Fun, a fair launchpad for new coins
+                without presales on Radix, in August 2025. It quickly reached a
+                bonding curve market cap of 690k XRD. The liquidity raised was
+                deposited into an Ociswap pool, one of the leading DEXs on
+                Radix, and permanently locked. Additionally, Scrypto was the
+                first token in the Radix ecosystem to create and lock liquidity
+                pools on CaviarNine, another leading DEX on Radix, following the
+                Hyperlane integration in September 2025. Initial pools include
+                hUSDC, hUSDT, hWBTC, and hETH, with plans to add more major
+                asset-class LPs...
+              </p>
+            ) : (
+              <>
+                <p className="text-lg text-gray-400 mt-4 leading-relaxed">
+                  Scrypto was launched on Rly.Fun, a fair launchpad for new
+                  coins without presales on Radix, in August 2025. It quickly
+                  reached a bonding curve market cap of 690k XRD. The liquidity
+                  raised was deposited into an Ociswap pool, one of the leading
+                  DEXs on Radix, and permanently locked. Additionally, Scrypto
+                  was the first token in the Radix ecosystem to create and lock
+                  liquidity pools on CaviarNine, another leading DEX on Radix,
+                  following the Hyperlane integration in September 2025. Initial
+                  pools include hUSDC, hUSDT, hWBTC, and hETH, with plans to add
+                  more major asset-class LPs.
+                </p>
+                <p className="text-lg text-gray-400 mt-4 leading-relaxed">
+                  Inspired by the futuristic and loyal vibe of a cyber- enhanced
+                  husky, Scrypto is a wild, community-driven meme coin that
+                  embodies strength, adaptability, and innovation within the
+                  Radix ecosystem.
+                </p>
+                <p className="text-lg text-gray-400 mt-4 leading-relaxed">
+                  Scrypto is more than just a meme coin — it celebrates and pays
+                  homage to Radix and its open-source smart contract language,
+                  Scrypto. It empowers developers to build and deploy their most
+                  creative ideas quickly and securely on the Radix.
+                </p>
+              </>
+            )}
+            <button
+              onClick={() => setShowMore(!showMore)}
+              className="mt-2 text-pink-400 hover:underline text-sm font-medium">
+              {showMore ? "See Less" : "See More"}
+            </button>
+          </div>
 
           {/* Grid untuk Feature Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
