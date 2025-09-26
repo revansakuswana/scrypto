@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { IconEye } from "@tabler/icons-react";
-import WolfImage from "../../assets/logo-wolf.svg";
+import logoHeading from "@/assets/logo-heading.png";
+import WolfImage from "../../assets/logo-wolf.png";
 
 export default function SectionTokenomics() {
   return (
@@ -25,13 +26,33 @@ export default function SectionTokenomics() {
       sm:px-10
       lg:px-20
     ">
+      {/* Pill/Tag di atas judul */}
+      <div
+        className="
+        flex 
+        items-center 
+        justify-center 
+        gap-2
+        border 
+        bg-white/3
+        border-white/8
+        rounded-lg
+        p-3
+        text-xl
+        font-light
+        tracking-wider
+        mb-6
+      ">
+        <img src={logoHeading} alt="Logo heading" className="w-4 h-4 mx-auto" />
+        Tokenomics
+      </div>
       <div className="text-center mb-6">
         <motion.h2
           initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl md:text-5xl font-bold text-pink-500  tracking-wider mb-4">
+          className="text-5xl md:text-6xl font-bold text-pink-500  tracking-wider mb-4">
           Tokenomics
         </motion.h2>
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full "></div>
@@ -48,7 +69,7 @@ export default function SectionTokenomics() {
           transition={{ duration: 0.8 }}
           className="space-y-4 text-left text-gray-300">
           <div className="overflow-x-auto">
-            <table className="w-full text-gray-300 text-sm border-separate border-spacing-y-2">
+            <table className="w-full text-gray-300 text-2xl border-separate border-spacing-y-2">
               <tbody>
                 <tr>
                   <td className="font-semibold text-white pr-4">

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import logoHeading from "@/assets/logo-heading.svg";
-import logoWolf from "@/assets/logo-wolf.svg";
+import logoHeading from "@/assets/logo-heading.png";
+import logoWolf from "@/assets/logo-wolf.png";
 
 export default function SectionAbout() {
   return (
@@ -37,7 +37,7 @@ export default function SectionAbout() {
         border-white/8
         rounded-lg
         p-3
-        text-xs
+        text-xl
         font-light
         tracking-wider
         mb-6
@@ -52,7 +52,7 @@ export default function SectionAbout() {
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
+          className="text-5xl md:text-6xl font-bold text-pink-500 tracking-wider">
           About SCRYPTO
         </motion.h2>
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
@@ -63,7 +63,7 @@ export default function SectionAbout() {
         {/* Kolom Kiri: Teks */}
         <div className="flex flex-col gap-6 mt-4 text-left">
           <div className="bg-transparent border rounded-lg shadow-2xl p-6">
-            <p className="text-lg text-gray-400 leading-relaxed">
+            <p className="text-2xl text-gray-400 leading-relaxed">
               Scrypto was launched on Rly.Fun, a fair launchpad for new coins
               without presales on Radix, in August 2025. It quickly reached a
               bonding curve market cap of 690k XRD. The liquidity raised was
@@ -76,14 +76,14 @@ export default function SectionAbout() {
             </p>
           </div>
           <div className="bg-transparent border rounded-lg shadow-2xl p-6">
-            <p className="text-lg text-gray-400 leading-relaxed">
+            <p className="text-2xl text-gray-400 leading-relaxed">
               Inspired by the futuristic and loyal vibe of a cyber-enhanced
               husky, Scrypto is a wild, community-driven meme coin that embodies
               strength, adaptability, and innovation within the Radix ecosystem.
             </p>
           </div>
           <div className="bg-transparent border rounded-lg shadow-2xl p-6">
-            <p className="text-lg text-gray-400 leading-relaxed">
+            <p className="text-2xl text-gray-400 leading-relaxed">
               Scrypto is more than just a meme coin — it celebrates and pays
               homage to Radix and its open-source smart contract language,
               Scrypto. It empowers developers to build and deploy their most

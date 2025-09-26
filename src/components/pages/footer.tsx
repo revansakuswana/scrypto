@@ -1,10 +1,10 @@
 import {
   IconBrandTelegram,
-  IconBrandTwitter,
+  IconBrandX,
   IconArrowsExchange,
 } from "@tabler/icons-react";
 
-import WolfLogo from "@/assets/logo-header.svg";
+import WolfLogo from "@/assets/logo-header.png";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -16,7 +16,7 @@ export default function Footer() {
     },
     {
       name: "Twitter",
-      icon: <IconBrandTwitter size={20} />,
+      icon: <IconBrandX size={20} />,
       url: "https://x.com/Scrypto_Radix",
     },
     {
@@ -45,11 +45,11 @@ export default function Footer() {
               transition={{ duration: 0.6 }}
               className="flex items-center gap-3 mb-4">
               <img src={WolfLogo} alt="Logo" className="w-12 h-12" />
-              <h3 className="font-bold text-lg text-pink-400">
+              <h3 className="font-bold text-2xl text-pink-400">
                 Cyber Pack Energy
               </h3>
             </motion.div>
-            <p className="text-sm max-w-xs">
+            <p className="text-xl max-w-xs">
               Cyber Pack Energy. Cyber Husky meme vibes unleashed on Radix.
             </p>
           </div>
@@ -61,7 +61,7 @@ export default function Footer() {
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="font-bold text-lg text-white mb-4">
+              className="font-bold text-2xl text-white mb-4">
               Join the Movement
             </motion.h3>
             <div className="flex justify-between text-center px-16 mx-10 sm:mx-0">
@@ -77,7 +77,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="flex flex-col items-center hover:text-cyan-400 transition-colors">
                   {link.icon}
-                  <span className="text-xs font-semibold">{link.name}</span>
+                  <span className="text-xl font-semibold">{link.name}</span>
                 </motion.a>
               ))}
             </div>
@@ -93,7 +93,7 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col sm:flex-row justify-between items-center text-sm">
+          className="flex flex-col sm:flex-row justify-between items-center text-xl">
           <p>&copy; {new Date().getFullYear()} SCRYPTO</p>
           <p className="mt-2 sm:mt-0">
             Powered by{" "}

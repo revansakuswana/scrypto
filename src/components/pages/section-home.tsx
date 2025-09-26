@@ -5,8 +5,8 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
-import logoHeading from "@/assets/logo-heading.svg";
-import logoHome from "@/assets/logo-home.svg";
+import logoHeading from "@/assets/logo-heading.png";
+import logoHome from "@/assets/logo-home.jpg";
 
 export default function SectionHome() {
   return (
@@ -25,7 +25,7 @@ export default function SectionHome() {
       justify-center
       text-center
       text-white
-      pt-8
+      pt-20
       px-5
       sm:pt-20
       sm:px-10
@@ -44,7 +44,7 @@ export default function SectionHome() {
         border-white/8
         rounded-lg
         p-3
-        text-xs
+        text-xl
         font-light
         tracking-wider
         mb-6
@@ -66,7 +66,7 @@ export default function SectionHome() {
       {/* Teks deskripsi kecil */}
       <p
         className="
-        text-lg 
+        text-2xl 
         text-gray-400   // Warna teks abu-abu
         mb-6            // Margin bawah besar sebelum tombol
       ">

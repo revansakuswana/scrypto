@@ -94,13 +94,13 @@ export default function SectionGallerySectionGallery() {
         border-white/8
         rounded-lg
         p-3
-        text-xs
+        text-xl
         font-light
         tracking-wider
         mb-6
       ">
         <img
-          src="/src/assets/logo-heading.svg"
+          src="/src/assets/logo-heading.png"
           alt="Logo"
           className="w-4 h-4 mx-auto"
         />
@@ -112,7 +112,7 @@ export default function SectionGallerySectionGallery() {
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
+          className="text-5xl md:text-6xl font-bold text-pink-500 tracking-wider">
           Pack Memes Unleashed
         </motion.h2>
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
@@ -121,7 +121,7 @@ export default function SectionGallerySectionGallery() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-6 text-lg text-gray-300 flex items-center justify-center gap-2">
+          className="mt-6 text-2xl text-gray-300 flex items-center justify-center gap-2">
           Community fire that hits different
         </motion.p>
       </div>

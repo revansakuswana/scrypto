@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import logoHeading from "@/assets/logo-heading.png";
 import astrlImg from "@/assets/WhatsApp Image 2025-08-31 at 22.43.12 (1).jpeg";
 import ociImg from "@/assets/WhatsApp Image 2025-08-31 at 22.43.12.jpeg";
 import caviarImg from "@/assets/WhatsApp Image 2025-08-31 at 22.43.13 (1).jpeg";
@@ -29,13 +30,37 @@ export default function SectionDexs() {
       sm:pb-20
       overflow-x-hidden
     ">
+      {/* Judul Section */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="
+        flex 
+        items-center 
+        justify-center 
+        gap-2
+        border 
+        bg-white/3
+        border-white/8
+        rounded-lg
+        p-3
+        text-xl
+        font-light
+        tracking-wider
+        mb-6
+      ">
+        <img src={logoHeading} alt="Logo heading" className="w-4 h-4 mx-auto" />
+        DEXs
+      </motion.div>
       <div className="text-center mb-6">
         <motion.h2
           initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
+          className="text-5xl md:text-6xl font-bold text-pink-500 tracking-wider">
           DEXs
         </motion.h2>
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
@@ -46,7 +71,7 @@ export default function SectionDexs() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="text-lg text-gray-300 flex items-center justify-center gap-2">
+        className="text-2xl text-gray-300 flex items-center justify-center gap-2">
         SCRYPTO available on:
       </motion.p>
 

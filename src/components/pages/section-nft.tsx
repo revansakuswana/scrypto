@@ -1,6 +1,6 @@
 import { IconTrendingUp, IconEye } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import logoHeading from "@/assets/logo-heading.svg";
+import logoHeading from "@/assets/logo-heading.png";
 import nft1 from "@/assets/51.png";
 import nft2 from "@/assets/145.png";
 import nft3 from "@/assets/184.png";
@@ -24,8 +24,8 @@ export default function SectionNft() {
       justify-center
       text-center
       text-white
-      pt-20
       px-5
+      sm:pt-20
       sm:px-10
       lg:px-20
       sm:pb-20
@@ -46,7 +46,7 @@ export default function SectionNft() {
         border-white/8
         rounded-lg
         p-3
-        text-xs
+        text-xl
         font-light
         tracking-wider
         mb-6
@@ -60,7 +60,7 @@ export default function SectionNft() {
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
+          className="text-5xl md:text-6xl font-bold text-pink-500 tracking-wider">
           SCRYPTO NFTS and Game
         </motion.h2>
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
@@ -69,7 +69,7 @@ export default function SectionNft() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex items-center text-center my-6 text-lg text-gray-300 gap-2">
+          className="flex items-center text-center my-6 text-2xl text-gray-300 gap-2">
           Total and max mint: 2,000 Cyber Huskies. Hold them to earn SCRYPTO
           rewards and join the Cyber Pack ecosystem, with SCRYPTO serving as the
           utility token. A Cyber Pack NFT battle web app game is in development,

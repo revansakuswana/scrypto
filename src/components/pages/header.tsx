@@ -1,4 +1,4 @@
-import logoHeader from "@/assets/logo-header.svg";
+import logoHeader from "@/assets/logo-header.png";
 import { IconMenu2 } from "@tabler/icons-react";
 import { useState } from "react";
 

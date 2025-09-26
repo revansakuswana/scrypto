@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import logoHeading from "@/assets/logo-heading.svg";
+import logoHeading from "@/assets/logo-heading.png";
 
 export default function SectionStaking() {
   return (
@@ -41,7 +41,7 @@ export default function SectionStaking() {
         border-white/8
         rounded-lg
         p-3
-        text-xs
+        text-xl
         font-light
         tracking-wider
         mb-6
@@ -55,7 +55,7 @@ export default function SectionStaking() {
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
+          className="text-5xl md:text-6xl font-bold text-pink-500 tracking-wider">
           SCRYPTO Staking
         </motion.h2>
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
@@ -65,7 +65,7 @@ export default function SectionStaking() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="text-lg text-gray-300 flex items-center justify-center gap-2">
+        className="text-2xl text-gray-300 flex items-center justify-center gap-2">
         Stake SCRYPTO to earn your share of 250,000 SCRYPTO rewards, distributed
         weekly to stakers.
       </motion.p>

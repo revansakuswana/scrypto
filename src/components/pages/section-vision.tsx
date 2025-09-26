@@ -1,7 +1,7 @@
 import { IconEye, IconUsers } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import logoHeading from "@/assets/logo-heading.svg";
-import logoWolf from "@/assets/logo-wolf.svg";
+import logoHeading from "@/assets/logo-heading.png";
+import logoWolf from "@/assets/logo-wolf.png";
 
 export default function SectionVision() {
   return (
@@ -42,7 +42,7 @@ export default function SectionVision() {
         border-white/8
         rounded-lg
         p-3
-        text-xs
+        text-xl
         font-light
         tracking-wider
         mb-6
@@ -57,7 +57,7 @@ export default function SectionVision() {
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
+          className="text-5xl md:text-6xl font-bold text-pink-500 tracking-wider">
           Pack Vision Unleashed
         </motion.h2>
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
@@ -66,7 +66,7 @@ export default function SectionVision() {
       {/* Konten Utama (Grid 2 Kolom) */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center text-left">
         {/* Kolom Kiri: Vision, Mission & Kartu Kecil */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 text-2xl">
           {/* Kartu Vision */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
