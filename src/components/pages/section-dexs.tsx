@@ -1,4 +1,8 @@
 import { motion } from "framer-motion";
+import astrlImg from "@/assets/WhatsApp Image 2025-08-31 at 22.43.12 (1).jpeg";
+import ociImg from "@/assets/WhatsApp Image 2025-08-31 at 22.43.12.jpeg";
+import caviarImg from "@/assets/WhatsApp Image 2025-08-31 at 22.43.13 (1).jpeg";
+import defiImg from "@/assets/WhatsApp Image 2025-08-31 at 22.43.13.jpeg";
 
 export default function SectionDexs() {
   return (
@@ -69,7 +73,7 @@ export default function SectionDexs() {
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
             <img
-              src="/src/assets/WhatsApp Image 2025-08-31 at 22.43.12 (1).jpeg"
+              src={astrlImg}
               alt="Ociswap"
               className="w-40 h-40 object-contain rounded-full"
             />
@@ -81,7 +85,7 @@ export default function SectionDexs() {
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
             <img
-              src="/src/assets/WhatsApp Image 2025-08-31 at 22.43.12.jpeg"
+              src={ociImg}
               alt="Astrl Trade"
               className="w-40 h-40 object-contain rounded-full"
             />
@@ -93,7 +97,7 @@ export default function SectionDexs() {
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
             <img
-              src="/src/assets/WhatsApp Image 2025-08-31 at 22.43.13 (1).jpeg"
+              src={caviarImg}
               alt="Defiplaza"
               className="w-40 h-40 object-contain rounded-full"
             />
@@ -105,7 +109,7 @@ export default function SectionDexs() {
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
             <img
-              src="/src/assets/WhatsApp Image 2025-08-31 at 22.43.13.jpeg"
+              src={defiImg}
               alt="Caviarnine"
               className="w-40 h-40 object-contain rounded-full"
             />
