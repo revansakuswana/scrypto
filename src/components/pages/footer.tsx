@@ -4,7 +4,7 @@ import {
   IconArrowsExchange,
 } from "@tabler/icons-react";
 
-import WolfLogo from "../../assets/logo-header.svg";
+import WolfLogo from "@/assets/logo-header.svg";
 import { motion } from "framer-motion";
 
 export default function Footer() {

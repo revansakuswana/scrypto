@@ -5,6 +5,8 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
+import logoHeading from "@/assets/logo-heading.svg";
+import logoHome from "@/assets/logo-home.svg";
 
 export default function SectionHome() {
   return (
@@ -44,11 +46,7 @@ export default function SectionHome() {
         tracking-wider
         mb-6
       ">
-        <img
-          src="/src/assets/logo-heading.svg"
-          alt="Logo"
-          className="w-4 h-4 mx-auto"
-        />
+        <img src={logoHeading} alt="Logo heading" className="w-4 h-4 mx-auto" />
         SCRYPTO on Radix
       </div>
 
@@ -57,8 +55,8 @@ export default function SectionHome() {
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        src="src/assets/logo-home.svg"
-        alt="Main Logo"
+        src={logoHome}
+        alt="Logo heading"
         className="w-80 h-80 rounded-full mx-auto mb-6"
       />
 
@@ -69,7 +67,7 @@ export default function SectionHome() {
         text-gray-400   // Warna teks abu-abu
         mb-6            // Margin bawah besar sebelum tombol
       ">
-        Scrypto: The Cyber Husky Meme Coin unleashed on Radix!
+        SCRYPTO: The Cyber Husky Meme Coin unleashed on Radix!
       </p>
 
       {/* Grup Tombol */}

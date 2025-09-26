@@ -6,6 +6,13 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 
+import meme1 from "@/assets/WhatsApp Image 2025-08-31 at 22.34.13 (1).jpeg";
+import meme2 from "@/assets/WhatsApp Image 2025-08-31 at 22.34.13.jpeg";
+import meme3 from "@/assets/WhatsApp Image 2025-08-31 at 22.34.14 (1).jpeg";
+import meme4 from "@/assets/WhatsApp Image 2025-08-31 at 22.34.14 (2).jpeg";
+import meme5 from "@/assets/WhatsApp Image 2025-08-31 at 22.34.14.jpeg";
+import meme6 from "@/assets/WhatsApp Image 2025-08-31 at 22.34.15 (1).jpeg";
+
 export default function SectionGallerySectionGallery() {
   const memes = [
     {
@@ -13,38 +20,38 @@ export default function SectionGallerySectionGallery() {
       likes: 420,
       comments: 69,
       color: "text-pink-400",
-      image: "/src/assets/WhatsApp Image 2025-08-31 at 22.34.13 (1).jpeg",
+      image: meme1,
     },
     {
       number: 2,
       likes: 1337,
       comments: 420,
       color: "text-pink-400",
-      image: "/src/assets/WhatsApp Image 2025-08-31 at 22.34.13.jpeg",
+      image: meme2,
     },
     {
       number: 3,
       likes: 888,
       comments: 123,
-      image: "/src/assets/WhatsApp Image 2025-08-31 at 22.34.14 (1).jpeg",
+      image: meme3,
     },
     {
       number: 4,
       likes: 666,
       comments: 88,
-      image: "/src/assets/WhatsApp Image 2025-08-31 at 22.34.14 (2).jpeg",
+      image: meme4,
     },
     {
       number: 5,
       likes: 990,
       comments: 200,
-      image: "/src/assets/WhatsApp Image 2025-08-31 at 22.34.14.jpeg",
+      image: meme5,
     },
     {
       number: 6,
       likes: 555,
       comments: 77,
-      image: "/src/assets/WhatsApp Image 2025-08-31 at 22.34.15 (1).jpeg",
+      image: meme6,
     },
   ];
 
@@ -63,7 +70,7 @@ export default function SectionGallerySectionGallery() {
       justify-center
       text-center
       text-white
-      pt-20
+      py-20
       px-5
       sm:px-35
       sm:py-30

@@ -1,7 +1,7 @@
 import { IconEye, IconUsers } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-
-import WolfImage from "../../assets/logo-header.svg";
+import logoHeading from "@/assets/logo-heading.svg";
+import logoWolf from "@/assets/logo-wolf.svg";
 
 export default function SectionVision() {
   return (
@@ -45,11 +45,7 @@ export default function SectionVision() {
         tracking-wider
         mb-6
       ">
-        <img
-          src="/src/assets/logo-heading.svg"
-          alt="Logo"
-          className="w-4 h-4 mx-auto"
-        />
+        <img src={logoHeading} alt="Logo heading" className="w-4 h-4 mx-auto" />
         Pack Vision
       </motion.div>
       <div className="text-center mb-16">
@@ -143,11 +139,7 @@ export default function SectionVision() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="flex justify-center items-center relative">
-          <img
-            src={WolfImage}
-            alt="Cyber Wolf Vision"
-            className="w-full max-w-sm"
-          />
+          <img src={logoWolf} alt="Logo wolf" className="w-full max-w-sm" />
         </motion.div>
       </div>
     </motion.section>

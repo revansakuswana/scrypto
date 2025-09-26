@@ -1,5 +1,10 @@
 import { IconTrendingUp } from "@tabler/icons-react";
 import { motion } from "framer-motion";
+import logoHeading from "@/assets/logo-heading.svg";
+import nft1 from "@/assets/51.png";
+import nft2 from "@/assets/145.png";
+import nft3 from "@/assets/184.png";
+import nft4 from "@/assets/627.png";
 
 export default function SectionNft() {
   return (
@@ -42,11 +47,7 @@ export default function SectionNft() {
         tracking-wider
         mb-6
       ">
-        <img
-          src="/src/assets/logo-heading.svg"
-          alt="Logo"
-          className="w-4 h-4 mx-auto"
-        />
+        <img src={logoHeading} alt="Logo heading" className="w-4 h-4 mx-auto" />
         NFTS
       </motion.div>
       <div className="text-center mb-6">
@@ -80,22 +81,22 @@ export default function SectionNft() {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-10">
         <img
-          src="/src/assets/51.png"
+          src={nft1}
           alt="NFT 1"
           className="w-full object-cover rounded-lg"
         />
         <img
-          src="/src/assets/145.png"
+          src={nft2}
           alt="NFT 2"
           className="w-full object-cover rounded-lg"
         />
         <img
-          src="/src/assets/184.png"
+          src={nft3}
           alt="NFT 3"
           className="w-full object-cover rounded-lg"
         />
         <img
-          src="/src/assets/627.png"
+          src={nft4}
           alt="NFT 4"
           className="w-full object-cover rounded-lg"
         />

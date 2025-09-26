@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import WolfImage from "../../assets/logo-header.svg";
+import logoHeading from "@/assets/logo-heading.svg";
+import logoWolf from "@/assets/logo-wolf.svg";
 
 export default function SectionAbout() {
   return (
@@ -39,14 +40,10 @@ export default function SectionAbout() {
         tracking-wider
         mb-6
       ">
-        <img
-          src="/src/assets/logo-heading.svg"
-          alt="Logo"
-          className="w-4 h-4 mx-auto"
-        />
-        SCRYPTO on Radix
+        <img src={logoHeading} alt="Logo heading" className="w-4 h-4 mx-auto" />
+        About
       </div>
-      <div className="text-center">
+      <div className="text-center mb-12">
         <motion.h2
           initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -101,8 +98,8 @@ export default function SectionAbout() {
           transition={{ duration: 0.8 }}
           className="flex justify-center items-center">
           <img
-            src={WolfImage}
-            alt="Cyber Wolf"
+            src={logoWolf}
+            alt="Logo wolf"
             className="w-full max-w-sm md:max-w-md"
           />
         </motion.div>

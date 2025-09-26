@@ -1,3 +1,4 @@
+import logoHeader from "@/assets/logo-header.svg";
 import { IconMenu2 } from "@tabler/icons-react";
 import { useState } from "react";
 
@@ -35,7 +36,8 @@ export default function Header({
         flex
         flex-wrap
         items-center
-        justify-center
+        justify-between
+        sm:justify-center
         px-4 sm:px-10 lg:px-35
         py-4 sm:py-5
         gap-4
@@ -44,11 +46,7 @@ export default function Header({
         {/* Bagian Kiri: Logo dan Nama Brand */}
         <a href="#home">
           <div className="flex items-center flex-shrink-0">
-            <img
-              src="/src/assets/logo-header.svg"
-              alt="Logo navbar"
-              className="w-8 h-8 mr-4"
-            />
+            <img src={logoHeader} alt="Logo navbar" className="w-8 h-8 mr-2" />
             <span className="text-white text-2xl font-normal tracking-wider">
               {brandName}
             </span>

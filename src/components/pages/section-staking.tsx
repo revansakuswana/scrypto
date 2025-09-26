@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import logoHeading from "@/assets/logo-heading.svg";
 
 export default function SectionStaking() {
   return (
@@ -41,11 +42,7 @@ export default function SectionStaking() {
         tracking-wider
         mb-6
       ">
-        <img
-          src="/src/assets/logo-heading.svg"
-          alt="Logo"
-          className="w-4 h-4 mx-auto"
-        />
+        <img src={logoHeading} alt="Logo heading" className="w-4 h-4 mx-auto" />
         Staking
       </motion.div>
       <div className="text-center mb-6">

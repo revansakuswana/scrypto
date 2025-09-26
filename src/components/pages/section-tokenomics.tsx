@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { toast } from "sonner";
-import { IconEye, IconCopy } from "@tabler/icons-react";
+import { IconEye } from "@tabler/icons-react";
 import WolfImage from "../../assets/logo-wolf.svg";
 
 export default function SectionTokenomics() {
@@ -84,29 +83,17 @@ export default function SectionTokenomics() {
                   events, and a growing ecosystem of dApps.
                 </td>
               </tr>
+              <tr>
+                <td className="font-semibold text-white pr-4">
+                  Resource Address:
+                </td>
+                <td className="break-all text-pink-400">
+                  resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c
+                </td>
+              </tr>
             </tbody>
           </table>
           <div className="flex gap-2 mt-6">
-            <motion.button
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              onClick={() => {
-                navigator.clipboard.writeText(
-                  "resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c"
-                );
-                toast.success("Contract address has been copied to clipboard!");
-              }}
-              className="
-          flex items-center
-          px-4 py-4 gap-2 rounded-lg bg-gradient-to-r
-          from-purple-600 to-blue-700
-          text-white
-          font-semibold hover:opacity-90 transition-opacity">
-              <IconCopy size={20} />
-              <span>Resource Address</span>
-            </motion.button>
             <motion.a
               variants={{
                 hidden: { opacity: 0, y: 20 },
