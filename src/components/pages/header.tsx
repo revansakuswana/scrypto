@@ -28,37 +28,34 @@ export default function Header({
     <>
       <header
         className="
+        w-full
         fixed
         top-0
         left-0
-        w-full
-        bg-white/3
-        flex
-        flex-wrap
-        items-center
-        justify-between
-        sm:justify-center
-        px-4 sm:px-10 lg:px-35
-        py-4 sm:py-5
-        gap-4
         z-50
+        bg-white/3
       ">
-        {/* Bagian Kiri: Logo dan Nama Brand */}
-        <a href="#home">
-          <div className="flex items-center flex-shrink-0">
-            <img src={logoHeader} alt="Logo navbar" className="w-8 h-8 mr-2" />
-            <span className="text-white text-2xl font-normal tracking-wider">
-              {brandName}
-            </span>
-          </div>
-        </a>
-        {/* Bagian Tengah: Navigasi */}
-        <nav className="hidden md:flex flex-1 justify-end items-center sm:gap-6 flex-wrap">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.to}
-              className="
+        <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-8 lg:px-20 py-4">
+          {/* Bagian Kiri: Logo dan Nama Brand */}
+          <a href="#home">
+            <div className="flex items-center flex-shrink-0">
+              <img
+                src={logoHeader}
+                alt="Logo navbar"
+                className="w-8 h-8 mr-2"
+              />
+              <span className="text-white text-2xl font-normal tracking-wider">
+                {brandName}
+              </span>
+            </div>
+          </a>
+          {/* Bagian Tengah: Navigasi */}
+          <nav className="hidden md:flex flex-1 justify-end items-center gap-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.to}
+                className="
               text-gray-400
               font-normal
               text-sm
@@ -66,15 +63,14 @@ export default function Header({
               transition-colors
               duration-300
             ">
-              {link.label}
-            </a>
-          ))}
-        </nav>
+                {link.label}
+              </a>
+            ))}
+          </nav>
 
-        {/* Bagian Kanan: Tombol "Buy now" dan Hamburger */}
-        <div className="flex items-center flex-shrink-0">
-          {/* Hamburger Menu untuk Mobile */}
-          <div className="md:hidden ml-4">
+          {/* Bagian Kanan: Tombol "Buy now" dan Hamburger */}
+          <div className="flex items-center md:hidden">
+            {/* Hamburger Menu untuk Mobile */}
             <button
               className="text-white"
               onClick={() => setIsMenuOpen((open) => !open)}

@@ -28,8 +28,9 @@ const HomePageTemplate: React.FC<MainPageTemplateProps> = ({
   sectionGallery,
 }) => {
   return (
-    <div>
+    <>
       <Header />
+      <div className="h-16" />
       <main>
         {sectionHome}
         {sectionAbout}
@@ -43,7 +44,7 @@ const HomePageTemplate: React.FC<MainPageTemplateProps> = ({
       </main>
       <Footer />
       <Toaster richColors />
-    </div>
+    </>
   );
 };
 

@@ -287,18 +287,23 @@ export default function SectionChart() {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       className="
-      w-full 
-      flex 
-      flex-col
-      items-center
-      justify-center
-      text-center
-      text-white
-      pt-20
-      px-5
-      sm:px-35
-      sm:py-30
-    ">
+        w-full
+        max-w-screen-xl
+        mx-auto
+        flex
+        flex-col
+        items-center
+        justify-center
+        text-center
+        text-white
+        pt-20
+        px-5
+        sm:pt-28
+        sm:px-10
+        lg:px-20
+        sm:pb-20
+        overflow-x-hidden
+      ">
       <div
         className="
         flex 
@@ -319,7 +324,7 @@ export default function SectionChart() {
         Track The Pack
       </div>
       <div className="container mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-6">
           <motion.h2
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}

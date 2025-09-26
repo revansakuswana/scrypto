@@ -12,8 +12,10 @@ export default function SectionVision() {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       className="
-      w-full 
-      flex 
+      w-full
+      max-w-screen-xl
+      mx-auto
+      flex
       flex-col
       items-center
       justify-center
@@ -21,8 +23,8 @@ export default function SectionVision() {
       text-white
       py-20
       px-5
-      sm:px-35
-      sm:py-30
+      sm:px-10
+      lg:px-20
     ">
       {/* Judul Section */}
       <motion.div
@@ -48,7 +50,8 @@ export default function SectionVision() {
         <img src={logoHeading} alt="Logo heading" className="w-4 h-4 mx-auto" />
         Pack Vision
       </motion.div>
-      <div className="text-center mb-16">
+
+      <div className="text-center mb-6">
         <motion.h2
           initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}

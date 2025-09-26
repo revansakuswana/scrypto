@@ -15,8 +15,10 @@ export default function SectionNft() {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       className="
-      w-full 
-      flex 
+      w-full
+      max-w-screen-xl
+      mx-auto
+      flex
       flex-col
       items-center
       justify-center
@@ -24,8 +26,10 @@ export default function SectionNft() {
       text-white
       pt-20
       px-5
-      sm:px-35
-      sm:py-30
+      sm:px-10
+      lg:px-20
+      sm:pb-20
+      overflow-x-hidden
     ">
       <motion.div
         initial={{ opacity: 0 }}
@@ -50,7 +54,7 @@ export default function SectionNft() {
         <img src={logoHeading} alt="Logo heading" className="w-4 h-4 mx-auto" />
         NFTS
       </motion.div>
-      <div className="text-center mb-6">
+      <div className="w-full  text-center mb-6">
         <motion.h2
           initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -65,17 +69,32 @@ export default function SectionNft() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="my-6 text-lg text-gray-300 flex items-center justify-center gap-2">
+          className="flex items-center text-center my-6 text-lg text-gray-300 gap-2">
           Total and max mint: 2,000 Cyber Huskies. Hold them to earn SCRYPTO
           rewards and join the Cyber Pack ecosystem, with SCRYPTO serving as the
           utility token. A Cyber Pack NFT battle web app game is in development,
           featuring Play-to-Earn and Player-vs-Player gameplay, also utilizing
           SCRYPTO as the in-game utility token.
         </motion.p>
-        <motion.p className="text-pink-500">
-          NFTs resource address:
-          resource_rdx1nf207knnk5w8wfd0cgp9mrmxultyrru6p708d7kgt7emauj3276d04
-        </motion.p>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="overflow-x-auto">
+          <table className="w-full text-gray-300 text-left text-sm border-separate border-spacing-y-2">
+            <tbody>
+              <tr>
+                <td className="font-semibold text-white pr-4 py-2">
+                  NFTs Resource Address:
+                </td>
+                <td className="py-2 break-all text-pink-400">
+                  resource_rdx1nf207knnk5w8wfd0cgp9mrmxultyrru6p708d7kgt7emauj3276d04
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </motion.div>
       </div>
 
       <motion.div

@@ -16,18 +16,21 @@ export default function SectionHome() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       className="
-      w-full 
-      flex 
+      w-full
+      max-w-screen-xl
+      mx-auto
+      flex
       flex-col
       items-center
       justify-center
       text-center
       text-white
-      pt-30
+      pt-8
       px-5
-      sm:pt-50
-      sm:px-35
-      sm:pb-30
+      sm:pt-20
+      sm:px-10
+      lg:px-20
+      sm:pb-20
     ">
       {/* Pill/Tag di atas judul */}
       <div

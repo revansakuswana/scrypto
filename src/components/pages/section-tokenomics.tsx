@@ -11,19 +11,21 @@ export default function SectionTokenomics() {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       className="
-      w-full 
-      flex 
+      w-full
+      max-w-screen-xl
+      mx-auto
+      flex
       flex-col
       items-center
       justify-center
       text-center
       text-white
-      pt-20
+      py-20
       px-5
-      sm:px-35
-      sm:py-30
+      sm:px-10
+      lg:px-20
     ">
-      <div className="text-center mb-12">
+      <div className="text-center mb-6">
         <motion.h2
           initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -45,54 +47,58 @@ export default function SectionTokenomics() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="space-y-4 text-left text-gray-300">
-          <table className="w-full text-gray-300 text-sm border-separate border-spacing-y-2">
-            <tbody>
-              <tr>
-                <td className="font-semibold text-white pr-4">
-                  Token Max Supply:
-                </td>
-                <td>1B</td>
-              </tr>
-              <tr>
-                <td className="font-semibold text-white pr-4">Total Minted:</td>
-                <td>1B</td>
-              </tr>
-              <tr>
-                <td className="font-semibold text-white pr-4">Tax:</td>
-                <td>0%</td>
-              </tr>
-              <tr>
-                <td className="font-semibold text-white pr-4">Chain:</td>
-                <td>
-                  Launched on <span className="text-pink-400">Rly.Fun</span>, a
-                  fair launchpad on Radix
-                </td>
-              </tr>
-              <tr>
-                <td className="font-semibold text-white pr-4">
-                  Safe Contract:
-                </td>
-                <td>Not mintable, recallable, freezable</td>
-              </tr>
-              <tr>
-                <td className="font-semibold text-white pr-4">
-                  Scrypto Utility:
-                </td>
-                <td>
-                  The Scrypto token powers rewards, staking, liquidity pools,
-                  events, and a growing ecosystem of dApps.
-                </td>
-              </tr>
-              <tr>
-                <td className="font-semibold text-white pr-4">
-                  Resource Address:
-                </td>
-                <td className="break-all text-pink-400">
-                  resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="overflow-x-auto">
+            <table className="w-full text-gray-300 text-sm border-separate border-spacing-y-2">
+              <tbody>
+                <tr>
+                  <td className="font-semibold text-white pr-4">
+                    Token Max Supply:
+                  </td>
+                  <td>1B</td>
+                </tr>
+                <tr>
+                  <td className="font-semibold text-white pr-4">
+                    Total Minted:
+                  </td>
+                  <td>1B</td>
+                </tr>
+                <tr>
+                  <td className="font-semibold text-white pr-4">Tax:</td>
+                  <td>0%</td>
+                </tr>
+                <tr>
+                  <td className="font-semibold text-white pr-4">Chain:</td>
+                  <td>
+                    Launched on <span className="text-pink-400">Rly.Fun</span>,
+                    a fair launchpad on Radix
+                  </td>
+                </tr>
+                <tr>
+                  <td className="font-semibold text-white pr-4">
+                    Safe Contract:
+                  </td>
+                  <td>Not mintable, recallable, freezable</td>
+                </tr>
+                <tr>
+                  <td className="font-semibold text-white pr-4">
+                    Scrypto Utility:
+                  </td>
+                  <td>
+                    The Scrypto token powers rewards, staking, liquidity pools,
+                    events, and a growing ecosystem of dApps.
+                  </td>
+                </tr>
+                <tr>
+                  <td className="font-semibold text-white pr-4">
+                    Resource Address:
+                  </td>
+                  <td className="break-all text-pink-400">
+                    resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <div className="flex gap-2 mt-6">
             <motion.a
               variants={{

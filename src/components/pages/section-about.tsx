@@ -11,17 +11,19 @@ export default function SectionAbout() {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       className="
-      w-full 
-      flex 
+      w-full
+      max-w-screen-xl
+      mx-auto
+      flex
       flex-col
       items-center
       justify-center
       text-center
       text-white
-      pt-20
+      py-20
       px-5
-      sm:px-35
-      sm:py-30
+      sm:px-10
+      lg:px-20
     ">
       {/* Pill/Tag di atas judul */}
       <div
@@ -43,7 +45,8 @@ export default function SectionAbout() {
         <img src={logoHeading} alt="Logo heading" className="w-4 h-4 mx-auto" />
         About
       </div>
-      <div className="text-center mb-12">
+
+      <div className="text-center mb-6">
         <motion.h2
           initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -52,7 +55,6 @@ export default function SectionAbout() {
           className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wider">
           About SCRYPTO
         </motion.h2>
-        {/* Aksen garis bawah */}
         <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
       </div>
 

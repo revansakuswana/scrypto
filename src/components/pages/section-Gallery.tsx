@@ -63,8 +63,10 @@ export default function SectionGallerySectionGallery() {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       className="
-      w-full 
-      flex 
+      w-full
+      max-w-screen-xl
+      mx-auto
+      flex
       flex-col
       items-center
       justify-center
@@ -72,8 +74,10 @@ export default function SectionGallerySectionGallery() {
       text-white
       py-20
       px-5
-      sm:px-35
-      sm:py-30
+      sm:px-10
+      lg:px-20
+      sm:pb-20
+      overflow-x-hidden
     ">
       <motion.div
         initial={{ opacity: 0 }}
