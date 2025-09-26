@@ -5,7 +5,7 @@ import {
   IconShare,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-
+import logoHeading from "@/assets/logo-heading.png";
 import meme1 from "@/assets/WhatsApp Image 2025-08-31 at 22.34.13 (1).jpeg";
 import meme2 from "@/assets/WhatsApp Image 2025-08-31 at 22.34.13.jpeg";
 import meme3 from "@/assets/WhatsApp Image 2025-08-31 at 22.34.14 (1).jpeg";
@@ -99,11 +99,7 @@ export default function SectionGallerySectionGallery() {
         tracking-wider
         mb-6
       ">
-        <img
-          src="/src/assets/logo-heading.png"
-          alt="Logo"
-          className="w-4 h-4 mx-auto"
-        />
+        <img src={logoHeading} alt="Logo heading" className="w-4 h-4 mx-auto" />
         Pack Memes
       </motion.div>
       <div className="text-center mb-6">

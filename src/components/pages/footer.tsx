@@ -15,7 +15,7 @@ export default function Footer() {
       url: "https://t.me/scryptoxrd",
     },
     {
-      name: "Twitter",
+      name: "X",
       icon: <IconBrandX size={20} />,
       url: "https://x.com/Scrypto_Radix",
     },
