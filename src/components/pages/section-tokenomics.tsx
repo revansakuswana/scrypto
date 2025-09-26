@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { IconEye } from "@tabler/icons-react";
 import logoHeading from "@/assets/logo-heading.png";
-import WolfImage from "../../assets/logo-wolf.png";
+import WolfImage from "../../assets/file_000000006cf461faa80dd5ae9b11b738.png";
 
 export default function SectionTokenomics() {
   return (
@@ -90,8 +90,15 @@ export default function SectionTokenomics() {
                 <tr>
                   <td className="font-semibold text-white pr-4">Chain:</td>
                   <td>
-                    Launched on <span className="text-pink-400">Rly.Fun</span>,
-                    a fair launchpad on Radix
+                    Launched on{" "}
+                    <a
+                      href="https://rly.fun/SCRYPTO"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-pink-400 font-bold hover:underline">
+                      Rly.Fun
+                    </a>
+                    , a fair launchpad on Radix
                   </td>
                 </tr>
                 <tr>

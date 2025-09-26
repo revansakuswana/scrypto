@@ -1,7 +1,7 @@
 import { IconEye, IconUsers } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import logoHeading from "@/assets/logo-heading.png";
-import logoWolf from "@/assets/logo-wolf.png";
+import logoWolf from "@/assets/logo-header.png";
 
 export default function SectionVision() {
   return (
