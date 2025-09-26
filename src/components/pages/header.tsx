@@ -35,7 +35,7 @@ export default function Header({
         flex
         flex-wrap
         items-center
-        justify-between
+        justify-center
         px-4 sm:px-10 lg:px-35
         py-4 sm:py-5
         gap-4
@@ -45,7 +45,7 @@ export default function Header({
         <a href="#home">
           <div className="flex items-center flex-shrink-0">
             <img
-              src="/logo-header.svg"
+              src="/src/assets/logo-header.svg"
               alt="Logo navbar"
               className="w-8 h-8 mr-4"
             />
@@ -101,7 +101,7 @@ export default function Header({
           flex
           flex-col
           items-center
-          justify-between
+          justify-center
           transition-opacity
           duration-300
           ${

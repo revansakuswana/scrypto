@@ -1,28 +1,28 @@
-import HomePageTemplate from "@/components/pages/home-page";
-import SectionOne from "@/components/pages/section-one";
-import SectionTwo from "@/components/pages/section-two";
-import SectionThree from "@/components/pages/section-three";
-import SectionFour from "@/components/pages/section-four";
-import SectionFive from "@/components/pages/section-five";
-import SectionSix from "@/components/pages/section-six";
-import SectionSeven from "@/components/pages/section-seven";
-import SectionEight from "@/components/pages/section-eight";
-import SectionNine from "@/components/pages/section-nine";
+import MainPageTemplate from "@/components/pages/main-page";
+import SectionHome from "@/components/pages/section-home";
+import SectionAbout from "@/components/pages/section-about";
+import SectionTokenomics from "@/components/pages/section-tokenomics";
+import SectionVision from "@/components/pages/section-vision";
+import SectionChart from "@/components/pages/section-chart";
+import SectionDexs from "@/components/pages/section-dexs";
+import SectionNft from "@/components/pages/section-nft";
+import SectionStaking from "@/components/pages/section-staking";
+import SectionGallery from "@/components/pages/section-Gallery";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <HomePageTemplate
-        sectionOne={<SectionOne />}
-        sectionTwo={<SectionTwo />}
-        sectionThree={<SectionThree />}
-        sectionFour={<SectionFour />}
-        sectionNine={<SectionNine />}
-        sectionFive={<SectionFive />}
-        sectionSix={<SectionSix />}
-        sectionSeven={<SectionSeven />}
-        sectionEight={<SectionEight />}
+      <MainPageTemplate
+        sectionHome={<SectionHome />}
+        sectionAbout={<SectionAbout />}
+        sectionTokenomics={<SectionTokenomics />}
+        sectionVision={<SectionVision />}
+        sectionChart={<SectionChart />}
+        sectionDexs={<SectionDexs />}
+        sectionStaking={<SectionStaking />}
+        sectionNft={<SectionNft />}
+        sectionGallery={<SectionGallery />}
       />
     </>
   );
