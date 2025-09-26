@@ -74,7 +74,7 @@ export default function SectionDexs() {
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
             <img
               src={astrlImg}
-              alt="Ociswap"
+              alt="Astrl Trade"
               className="w-40 h-40 object-contain rounded-full"
             />
             <span className="text-sm">astrl.trade</span>
@@ -86,7 +86,7 @@ export default function SectionDexs() {
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
             <img
               src={ociImg}
-              alt="Astrl Trade"
+              alt="Ociswap"
               className="w-40 h-40 object-contain rounded-full"
             />
             <span className="text-sm">ociswap.com</span>
@@ -98,7 +98,7 @@ export default function SectionDexs() {
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
             <img
               src={caviarImg}
-              alt="Defiplaza"
+              alt="Caviarnine"
               className="w-40 h-40 object-contain rounded-full"
             />
             <span className="text-sm">caviarnine.com</span>
@@ -110,7 +110,7 @@ export default function SectionDexs() {
             className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
             <img
               src={defiImg}
-              alt="Caviarnine"
+              alt="Defiplaza"
               className="w-40 h-40 object-contain rounded-full"
             />
             <span className="text-sm">defiplaza.net</span>

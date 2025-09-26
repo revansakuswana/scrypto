@@ -1,4 +1,4 @@
-import { IconTrendingUp } from "@tabler/icons-react";
+import { IconTrendingUp, IconEye } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import logoHeading from "@/assets/logo-heading.svg";
 import nft1 from "@/assets/51.png";
@@ -65,12 +65,16 @@ export default function SectionNft() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-6 text-lg text-gray-300 flex items-center justify-center gap-2">
+          className="my-6 text-lg text-gray-300 flex items-center justify-center gap-2">
           Total and max mint: 2,000 Cyber Huskies. Hold them to earn SCRYPTO
           rewards and join the Cyber Pack ecosystem, with SCRYPTO serving as the
-          utility token. An NFT battle web app game is in development, featuring
-          Play-to-Earn and Player-vs-Player gameplay, also utilizing SCRYPTO as
-          the in-game utility token.
+          utility token. A Cyber Pack NFT battle web app game is in development,
+          featuring Play-to-Earn and Player-vs-Player gameplay, also utilizing
+          SCRYPTO as the in-game utility token.
+        </motion.p>
+        <motion.p className="text-pink-500">
+          NFTs resource address:
+          resource_rdx1nf207knnk5w8wfd0cgp9mrmxultyrru6p708d7kgt7emauj3276d04
         </motion.p>
       </div>
 
@@ -107,7 +111,7 @@ export default function SectionNft() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.6 }}
-        className="flex flex-col gap-8">
+        className="flex gap-8">
         {/* Tombol "Buy Now" */}
         <a
           href="https://singularityx.net/nfts#scrypto"
@@ -116,6 +120,15 @@ export default function SectionNft() {
           <button className="flex items-center gap-2 px-6 py-5 rounded-lg font-bold text-black bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 transition-opacity">
             <IconTrendingUp size={20} />
             <span>BUY NOW</span>
+          </button>
+        </a>
+        <a
+          href="https://www.radxplorer.com/resources/resource_rdx1nf207knnk5w8wfd0cgp9mrmxultyrru6p708d7kgt7emauj3276d04?tab=nftRarity"
+          target="_blank"
+          rel="noopener noreferrer">
+          <button className="flex items-center gap-2 px-6 py-5 rounded-lg font-bold text-black bg-gradient-to-r from-cyan-500 to-blue-600 hover:opacity-90 transition-opacity">
+            <IconEye size={20} />
+            <span>View NFT Rarity</span>
           </button>
         </a>
       </motion.div>

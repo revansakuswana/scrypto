@@ -85,7 +85,7 @@ export default function SectionAbout() {
               Scrypto is more than just a meme coin — it celebrates and pays
               homage to Radix and its open-source smart contract language,
               Scrypto. It empowers developers to build and deploy their most
-              creative ideas quickly and securely on the Radix.
+              creative ideas quickly and securely on Radix.
             </p>
           </div>
         </div>
