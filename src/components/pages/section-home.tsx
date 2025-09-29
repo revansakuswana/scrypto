@@ -25,9 +25,9 @@ export default function SectionHome() {
       justify-center
       text-center
       text-white
-      pt-20
+      pt-8
       px-5
-      sm:pt-20
+      sm:pt-10
       sm:px-10
       lg:px-20
       sm:pb-20

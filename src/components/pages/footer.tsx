@@ -70,7 +70,7 @@ export default function Footer() {
               className="font-bold text-2xl text-white mb-4">
               Join the Movement
             </motion.h3>
-            <div className="flex justify-between text-center px-16 mx-10 sm:mx-0">
+            <div className="flex justify-center text-center px-16 mx-10 sm:mx-0 gap-4">
               {socialLinks.map((link, index) => (
                 <motion.a
                   key={link.name}

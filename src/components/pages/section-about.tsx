@@ -64,7 +64,16 @@ export default function SectionAbout() {
         <div className="flex flex-col gap-6 mt-4 text-left">
           <div className="bg-transparent border rounded-lg shadow-2xl p-6">
             <p className="text-2xl text-gray-400 leading-relaxed">
-              In September 2025, SCRYPTO graduated on Pump.Fun, a fair launchpad
+              Scrypto was launched on Rly.Fun, a fair launchpad for new coins
+              without presales on Radix, in August 2025. It quickly reached a
+              bonding curve market cap of 690k XRD. The liquidity raised was
+              deposited into an Ociswap pool, one of the leading DEXs on Radix,
+              and permanently locked. Additionally, Scrypto was the first token
+              in the Radix ecosystem to create and lock liquidity pools on
+              CaviarNine, another leading DEX on Radix, following the Hyperlane
+              integration in September 2025. Initial pools include hUSDC, hUSDT,
+              hWBTC, and hETH, with plans to add more major asset-class LPs. In
+              September 2025, SCRYPTO graduated on Pump.Fun, a fair launchpad
               for new Solana coins with no presales, giving meme enthusiasts an
               additional market option. The liquidity raised was deposited into
               a Pump.Fun pool—one of Solana’s leading DEXs—and permanently
