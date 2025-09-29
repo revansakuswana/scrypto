@@ -129,7 +129,7 @@ export default function SectionHome() {
           hover:opacity-90 transition-opacity
         ">
             <IconTrendingUp size={20} />
-            <span>BUY NOW (Radix)</span>
+            <span>BUY NOW (Solana)</span>
           </button>
         </motion.a>
 

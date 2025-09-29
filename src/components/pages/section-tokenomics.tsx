@@ -100,7 +100,6 @@ export default function SectionTokenomics() {
                       className="text-pink-400 font-bold hover:underline">
                       Streamflow Vault
                     </a>{" "}
-                    (indefinite token locks with recurring extensions)
                   </td>
                 </tr>
                 <tr>
@@ -115,7 +114,7 @@ export default function SectionTokenomics() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-pink-400 font-bold hover:underline">
-                        Radlock Vault
+                        Radlock
                       </a>{" "}
                       – 285M for SCRYPTO (Radix) Staking & NFT Rewards (28.5%),
                       100M Creator bought via open market (10%)
@@ -133,8 +132,16 @@ export default function SectionTokenomics() {
                       className="text-pink-400 font-bold hover:underline">
                       Rly.Fun
                     </a>
-                    , a fair launchpad on Radix & Pump.Fun, a fair launchpad on
-                    Solana.
+                    , a fair launchpad on Radix &{" "}
+                    <a
+                      href="https://pump.fun/coin/2NJiEJceNSE5VJ2NLeRpWpCkvHXj2Z82TDoHREYtMrWw"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-pink-400
+                      font-bold hover:underline">
+                      Pump.Fun
+                    </a>
+                    , a fair launchpad on Solana.
                   </td>
                 </tr>
                 <tr>
@@ -190,7 +197,28 @@ export default function SectionTokenomics() {
           hover:opacity-90 transition-opacity
         ">
                 <IconEye size={20} />
-                <span>VIEW SCRYPTO</span>
+                <span>VIEW SCRYPTO (Radix)</span>
+              </button>
+            </motion.a>
+            <motion.a
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              href="https://solscan.io/token/2NJiEJceNSE5VJ2NLeRpWpCkvHXj2Z82TDoHREYtMrWw"
+              target="_blank"
+              rel="noopener noreferrer">
+              <button
+                className="
+          flex items-center gap-2
+          px-4 py-4
+          rounded-lg 
+          font-bold 
+          bg-gradient-to-r from-red-600 to-pink-500 
+          hover:opacity-90 transition-opacity
+        ">
+                <IconEye size={20} />
+                <span>VIEW SCRYPTO (Solana)</span>
               </button>
             </motion.a>
           </div>
