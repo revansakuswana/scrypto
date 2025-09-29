@@ -92,7 +92,7 @@ export default function SectionTokenomics() {
                     Locked Supply:
                   </td>
                   <td>
-                    Solana 79.22% ,{" "}
+                    Solana: 79.22% ,{" "}
                     <a
                       href="https://app.streamflow.finance/contract/solana/mainnet/7j1JHonkGrci9oHxNPAdJfFAMjARkQyRZZ7L6f5r43Mq"
                       target="_blank"
