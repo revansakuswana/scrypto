@@ -71,10 +71,10 @@ export default function SectionNft() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex items-center text-center my-6 text-2xl text-gray-300 gap-2">
           Total and max mint: 2,000 Cyber Huskies. Hold them to earn SCRYPTO
-          rewards and join the Cyber Pack ecosystem, with SCRYPTO serving as the
-          utility token. A Cyber Pack NFT battle web app game is in development,
-          featuring Play-to-Earn and Player-vs-Player gameplay, also utilizing
-          SCRYPTO as the in-game utility token.
+          (Radix) rewards and join the Cyber Pack ecosystem, with SCRYPTO
+          (Radix) serving as the utility token. A Cyber Pack NFT battle web app
+          game is in development, featuring Play-to-Earn and Player-vs-Player
+          gameplay, also utilizing SCRYPTO (Radix) as the in-game utility token.
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}

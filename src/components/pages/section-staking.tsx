@@ -66,8 +66,8 @@ export default function SectionStaking() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.4 }}
         className="text-2xl text-gray-300 flex items-center justify-center gap-2">
-        Stake SCRYPTO to earn your share of 250,000 SCRYPTO rewards, distributed
-        weekly to stakers.
+        Stake SCRYPTO (Radix) to earn your share of 250,000 SCRYPTO (Radix)
+        rewards, distributed weekly to stakers.
       </motion.p>
       <div className="w-full mt-10">
         <iframe

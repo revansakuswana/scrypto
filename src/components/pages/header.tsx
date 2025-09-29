@@ -7,9 +7,7 @@ interface HeaderProps {
   onBuyButtonClick?: () => void;
 }
 
-export default function Header({
-  brandName = "SCRYPTO on Radix",
-}: HeaderProps) {
+export default function Header({ brandName = "SCRYPTO" }: HeaderProps) {
   const navLinks = [
     { to: "#home", label: "Home" },
     { to: "#about", label: "About" },

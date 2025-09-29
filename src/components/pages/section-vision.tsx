@@ -4,6 +4,38 @@ import logoHeading from "@/assets/logo-heading.png";
 import logoWolf from "@/assets/logo-header.png";
 
 export default function SectionVision() {
+  const visionCards = [
+    {
+      title: "Vision",
+      description:
+        "SCRYPTO is more than just a meme coin — it was created to celebrate and bring awareness to Radix and its open-source smart contract language, Scrypto.",
+      icon: <IconEye size={28} className="text-purple-400" />,
+      iconBg: "bg-purple-500/20",
+      border: "border-purple-400",
+      delay: 0.3,
+      direction: -50,
+    },
+    {
+      title: "Mission",
+      description:
+        "Longevity & Trust — Inspired by real technology and backed by locked liquidity & supply, SCRYPTO was created for the Radix & Solana communities to enjoy safely and securely.",
+      icon: <IconUsers size={28} className="text-cyan-400" />,
+      iconBg: "bg-cyan-500/20",
+      border: "border-cyan-400",
+      delay: 0.3,
+      direction: 50,
+    },
+    {
+      title: "Community Driven",
+      description: "Built by meme lovers, for meme lovers.",
+      icon: <IconUsers size={32} className="text-pink-400" />,
+      iconBg: "bg-pink-400/20",
+      border: "border-pink-400",
+      delay: 0,
+      direction: 0,
+    },
+  ];
+
   return (
     <motion.section
       id="vision"
@@ -67,72 +99,29 @@ export default function SectionVision() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center text-left">
         {/* Kolom Kiri: Vision, Mission & Kartu Kecil */}
         <div className="flex flex-col gap-6 text-2xl">
-          {/* Kartu Vision */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="
-              bg-gray-900/40 p-6 rounded-lg border border-purple-400
-              flex gap-6 items-start
-            ">
-            <div className="bg-purple-500/20 p-3 rounded-full">
-              <IconEye size={28} className="text-purple-400" />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-2">Vision</h3>
-              <p className="text-gray-300 leading-relaxed">
-                Scrypto is more than just a meme coin — it was created to
-                celebrate and bring awareness to Radix and its open-source smart
-                contract language, Scrypto.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Kartu Mission */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="
-              bg-gray-900/40 p-6 rounded-lg border border-cyan-400
-              flex gap-6 items-start
-            ">
-            <div className="bg-cyan-500/20 p-3 rounded-full">
-              <IconUsers size={28} className="text-cyan-400" />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-2">Mission</h3>
-              <p className="text-gray-300 leading-relaxed">
-                Longevity & Trust — Inspired by real technology and backed by
-                locked liquidity, Scrypto is created for the Radix community to
-                enjoy safely and securely.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Kartu Community Driven */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0 }}
-            className="
-                bg-gray-900/40 p-6 rounded-lg border border-pink-400
-                flex gap-6 items-start
-              ">
-            <div className="bg-pink-400/20 p-3 rounded-full">
-              <IconUsers size={32} className="text-pink-400" />
-            </div>
-            <div>
-              <h4 className="text-xl font-bold">Community Driven</h4>
-              <p className="text-gray-400">
-                Built by meme lovers, for meme lovers.
-              </p>
-            </div>
-          </motion.div>
+          {visionCards.map((card, index) => (
+            <motion.div
+              key={index}
+              initial={{
+                opacity: 0,
+                x: card.direction,
+                y: card.direction === 0 ? 30 : 0,
+              }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: card.delay }}
+              className={`bg-gray-900/40 p-6 rounded-lg border ${card.border} flex gap-6 items-start`}>
+              <div className={`${card.iconBg} p-3 rounded-full`}>
+                {card.icon}
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-2">{card.title}</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  {card.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
         {/* Kolom Kanan: Gambar dengan Tag */}

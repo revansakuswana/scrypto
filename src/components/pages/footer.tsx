@@ -20,9 +20,14 @@ export default function Footer() {
       url: "https://x.com/Scrypto_Radix",
     },
     {
-      name: "DEX",
+      name: "DEX (Radix)",
       icon: <IconArrowsExchange size={20} />,
       url: "https://ociswap.com/resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c",
+    },
+    {
+      name: "DEX (Solana)",
+      icon: <IconArrowsExchange size={20} />,
+      url: "https://pump.fun/coin/2NJiEJceNSE5VJ2NLeRpWpCkvHXj2Z82TDoHREYtMrWw",
     },
   ];
 
@@ -50,7 +55,8 @@ export default function Footer() {
               </h3>
             </motion.div>
             <p className="text-xl max-w-xs">
-              Cyber Pack Energy. Cyber Husky meme vibes unleashed on Radix.
+              Cyber Pack Energy. Cyber Husky meme vibes unleashed on Radix and
+              Solana.
             </p>
           </div>
 

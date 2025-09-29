@@ -75,17 +75,52 @@ export default function SectionTokenomics() {
                   <td className="font-semibold text-white pr-4">
                     Token Max Supply:
                   </td>
-                  <td>1B</td>
+                  <td>1B on Radix and 1B on Solana</td>
                 </tr>
                 <tr>
                   <td className="font-semibold text-white pr-4">
                     Total Minted:
                   </td>
-                  <td>1B</td>
+                  <td>1B on Radix and 1B on Solana</td>
                 </tr>
                 <tr>
                   <td className="font-semibold text-white pr-4">Tax:</td>
                   <td>0%</td>
+                </tr>
+                <tr>
+                  <td className="font-semibold text-white pr-4">
+                    Locked Supply:
+                  </td>
+                  <td>
+                    Solana 79.22% ,{" "}
+                    <a
+                      href="https://app.streamflow.finance/contract/solana/mainnet/7j1JHonkGrci9oHxNPAdJfFAMjARkQyRZZ7L6f5r43Mq"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-pink-400 font-bold hover:underline">
+                      Streamflow Vault
+                    </a>{" "}
+                    (indefinite token locks with recurring extensions)
+                  </td>
+                </tr>
+                <tr>
+                  <td className="font-semibold text-white pr-4">
+                    Locked Supply:
+                  </td>
+                  <td>
+                    <td>
+                      Radix: 38.5%,{" "}
+                      <a
+                        href="https://app.radlock.io/insights/projects/FungibleResource/resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-pink-400 font-bold hover:underline">
+                        Radlock Vault
+                      </a>{" "}
+                      – 285M for SCRYPTO (Radix) Staking & NFT Rewards (28.5%),
+                      100M Creator bought via open market (10%)
+                    </td>
+                  </td>
                 </tr>
                 <tr>
                   <td className="font-semibold text-white pr-4">Chain:</td>
@@ -98,7 +133,8 @@ export default function SectionTokenomics() {
                       className="text-pink-400 font-bold hover:underline">
                       Rly.Fun
                     </a>
-                    , a fair launchpad on Radix
+                    , a fair launchpad on Radix & Pump.Fun, a fair launchpad on
+                    Solana.
                   </td>
                 </tr>
                 <tr>
@@ -112,16 +148,24 @@ export default function SectionTokenomics() {
                     Scrypto Utility:
                   </td>
                   <td>
-                    The Scrypto token powers rewards, staking, liquidity pools,
-                    events, and a growing ecosystem of dApps.
+                    The SCRYPTO (Radix) token powers rewards, staking, liquidity
+                    pools, events, and a growing ecosystem of dApps.
                   </td>
                 </tr>
                 <tr>
                   <td className="font-semibold text-white pr-4">
-                    Resource Address:
+                    Radix Resource Address
                   </td>
                   <td className="break-all text-pink-400">
                     resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c
+                  </td>
+                </tr>
+                <tr>
+                  <td className="font-semibold text-white pr-4">
+                    Solana Contract Address
+                  </td>
+                  <td className="break-all text-pink-400">
+                    2NJiEJceNSE5VJ2NLeRpWpCkvHXj2Z82TDoHREYtMrWw
                   </td>
                 </tr>
               </tbody>

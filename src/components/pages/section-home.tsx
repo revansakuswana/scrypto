@@ -50,7 +50,7 @@ export default function SectionHome() {
         mb-6
       ">
         <img src={logoHeading} alt="Logo heading" className="w-4 h-4 mx-auto" />
-        SCRYPTO on Radix
+        SCRYPTO
       </div>
 
       {/* Gambar utama berbentuk lingkaran di tengah */}
@@ -70,7 +70,7 @@ export default function SectionHome() {
         text-gray-400   // Warna teks abu-abu
         mb-6            // Margin bawah besar sebelum tombol
       ">
-        SCRYPTO: The Cyber Husky Meme Coin unleashed on Radix!
+        SCRYPTO: The Cyber Husky Meme Coin unleashed on Radix and Solana!
       </p>
 
       {/* Grup Tombol */}
@@ -109,7 +109,27 @@ export default function SectionHome() {
           hover:opacity-90 transition-opacity
         ">
             <IconTrendingUp size={20} />
-            <span>BUY NOW</span>
+            <span>BUY NOW (Radix)</span>
+          </button>
+        </motion.a>
+        {/* Tombol "Buy Now" */}
+        <motion.a
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          href="https://pump.fun/coin/2NJiEJceNSE5VJ2NLeRpWpCkvHXj2Z82TDoHREYtMrWw">
+          <button
+            className="
+          flex items-center gap-2 
+          px-6 py-5 
+          rounded-lg 
+          font-bold 
+          bg-gradient-to-r from-purple-600 to-pink-500 
+          hover:opacity-90 transition-opacity
+        ">
+            <IconTrendingUp size={20} />
+            <span>BUY NOW (Radix)</span>
           </button>
         </motion.a>
 
@@ -178,7 +198,29 @@ export default function SectionHome() {
           hover:text-white transition-colors
         ">
           <IconCopy size={20} />
-          <span>Resource Address</span>
+          <span>Resource Address (Radix)</span>
+        </motion.button>
+
+        {/* Tombol "Resource Address" */}
+        <motion.button
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          onClick={() => {
+            navigator.clipboard.writeText(
+              "2NJiEJceNSE5VJ2NLeRpWpCkvHXj2Z82TDoHREYtMrWw"
+            );
+            toast.success("Contract address has been copied to clipboard!");
+          }}
+          className="
+          flex items-center gap-2 
+          font-semibold 
+          text-purple-400
+          hover:text-white transition-colors
+        ">
+          <IconCopy size={20} />
+          <span>Contract Address (Solana)</span>
         </motion.button>
       </motion.div>
     </motion.section>
