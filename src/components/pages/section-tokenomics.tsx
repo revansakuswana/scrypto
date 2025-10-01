@@ -94,7 +94,7 @@ export default function SectionTokenomics() {
                   <td>
                     Solana: 79.22% ,{" "}
                     <a
-                      href="https://app.streamflow.finance/contract/solana/mainnet/7j1JHonkGrci9oHxNPAdJfFAMjARkQyRZZ7L6f5r43Mq"
+                      href="https://app.streamflow.finance/project-dashboard/solana/mainnet/2NJiEJceNSE5VJ2NLeRpWpCkvHXj2Z82TDoHREYtMrWw"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-pink-400 font-bold hover:underline">

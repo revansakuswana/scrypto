@@ -78,7 +78,7 @@ export default function SectionAbout() {
               additional market option. The liquidity raised was deposited into
               a Pump.Fun pool—one of Solana’s leading DEXs—and permanently
               locked. With Solana’s upcoming integration to Radix via Hyperlane,
-              plans include a 1:1 SCRYPTO Radix-to-Solana swap bridge and a
+              plans include a 1:1 SCRYPTO Radix:Solana swap bridge and a
               SCRYPTO/hSOL locked liquidity pool on CaviarNine, further
               enhancing cross-chain utility and community engagement.
             </p>
