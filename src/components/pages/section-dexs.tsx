@@ -5,6 +5,7 @@ import ociImg from "@/assets/WhatsApp Image 2025-08-31 at 22.43.12.jpeg";
 import caviarImg from "@/assets/WhatsApp Image 2025-08-31 at 22.43.13 (1).jpeg";
 import defiImg from "@/assets/WhatsApp Image 2025-08-31 at 22.43.13.jpeg";
 import pumpfunImg from "@/assets/Pump-Fun-Logo.png";
+import raydium from "@/assets/raydium.jpeg";
 
 export default function SectionDexs() {
   const dexs = [
@@ -37,6 +38,12 @@ export default function SectionDexs() {
       img: pumpfunImg,
       alt: "Pumpfun",
       label: "Pump.Fun",
+    },
+    {
+      href: "https://raydium.io/swap/?inputMint=sol&outputMint=2NJiEJceNSE5VJ2NLeRpWpCkvHXj2Z82TDoHREYtMrWw",
+      img: raydium,
+      alt: "raydium",
+      label: "raydium.io",
     },
   ];
 

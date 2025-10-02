@@ -65,7 +65,7 @@ export default function SectionChart() {
         const change24h =
           price24h > 0 ? ((priceNow - price24h) / price24h) * 100 : 0;
         const marketCap = parseFloat(
-          data.market_cap?.circulating?.usd?.now ?? "0"
+          data.market_cap?.fully_diluted?.usd?.now ?? "0"
         );
         const volume24h = parseFloat(data.volume?.usd?.["24h"] ?? "0");
 

@@ -107,18 +107,16 @@ export default function SectionTokenomics() {
                     Locked Supply:
                   </td>
                   <td>
-                    <td>
-                      Radix: 38.5%,{" "}
-                      <a
-                        href="https://app.radlock.io/insights/projects/FungibleResource/resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-pink-400 font-bold hover:underline">
-                        Radlock
-                      </a>{" "}
-                      – 285M for SCRYPTO (Radix) Staking & NFT Rewards (28.5%),
-                      100M Creator bought via open market (10%)
-                    </td>
+                    Radix: 38.5%,{" "}
+                    <a
+                      href="https://app.radlock.io/insights/projects/FungibleResource/resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-pink-400 font-bold hover:underline">
+                      Radlock
+                    </a>{" "}
+                    – 285M for SCRYPTO (Radix) Staking & NFT Rewards (28.5%),
+                    100M Creator bought via open market (10%)
                   </td>
                 </tr>
                 <tr>
