@@ -64,10 +64,10 @@ export default function SectionAbout() {
         <div className="flex flex-col gap-6 mt-4 text-left">
           <div className="bg-transparent border rounded-lg shadow-2xl p-6">
             <p className="text-2xl text-gray-400 leading-relaxed">
-              2 Chains. 1 HuScrypto was launched on Rly.Fun, a fair launchpad
-              for new coins without presales on Radix, in August 2025. It
-              quickly reached a bonding curve market cap of 690k XRD. The
-              liquidity raised was deposited into an Ociswap XRD. The liquidity
+              2 Chains. 1 Husky. Cross-chain meme liquidity live on Solana +
+              Radix. Scrypto was launched on Rly.Fun, a fair launchpad for new
+              coins without presales on Radix, in August 2025. It quickly
+              reached a bonding curve market cap of 690k XRD. The liquidity
               raised was deposited into an Ociswap pool, one of the leading DEXs
               on Radix, and permanently locked. Additionally, Scrypto was the
               first token in the Radix ecosystem to create and lock liquidity
