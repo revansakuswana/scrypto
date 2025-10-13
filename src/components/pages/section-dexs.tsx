@@ -5,12 +5,14 @@ import ociImg from "@/assets/WhatsApp Image 2025-08-31 at 22.43.12.jpeg";
 import caviarImg from "@/assets/WhatsApp Image 2025-08-31 at 22.43.13 (1).jpeg";
 import defiImg from "@/assets/WhatsApp Image 2025-08-31 at 22.43.13.jpeg";
 import pumpfunImg from "@/assets/Pump-Fun-Logo.png";
-import raydium from "@/assets/raydium.jpeg";
+import raydiumImg from "@/assets//raydium.jpeg";
+import orcaImg from "@/assets/ohOk4cNf_400x400.png";
+import jupImg from "@/assets/jupiter-logo.png";
 
 export default function SectionDexs() {
   const dexs = [
     {
-      href: "https://astrl.trade",
+      href: "https://astrl.trade/token/resource_rdx1tkff46jkeu98jgl8naxpzfkn0m0hytysxzex3l3a8m7qps49f7m45c",
       img: astrlImg,
       alt: "Astrl Trade",
       label: "astrl.trade",
@@ -41,9 +43,21 @@ export default function SectionDexs() {
     },
     {
       href: "https://raydium.io/swap/?inputMint=sol&outputMint=2NJiEJceNSE5VJ2NLeRpWpCkvHXj2Z82TDoHREYtMrWw",
-      img: raydium,
+      img: raydiumImg,
       alt: "raydium",
       label: "raydium.io",
+    },
+    {
+      href: "https://www.orca.so/?tokenIn=So11111111111111111111111111111111111111112&tokenOut=2NJiEJceNSE5VJ2NLeRpWpCkvHXj2Z82TDoHREYtMrWw ",
+      img: orcaImg,
+      alt: "orca",
+      label: "orca.so",
+    },
+    {
+      href: "https://jup.ag/tokens/2NJiEJceNSE5VJ2NLeRpWpCkvHXj2Z82TDoHREYtMrWw",
+      img: jupImg,
+      alt: "jup.ag",
+      label: "jup.ag",
     },
   ];
 
@@ -116,7 +130,7 @@ export default function SectionDexs() {
         SCRYPTO available on:
       </motion.p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-5 gap-5 mt-10">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 mt-10">
         {dexs.map((dex, index) => (
           <a
             key={index}
